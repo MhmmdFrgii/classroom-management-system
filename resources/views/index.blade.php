@@ -12,7 +12,17 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Styles / Scripts -->
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        .hero-section {
+            transition: background-image 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+    </style>
 </head>
 
 <body class="font-sans antialiased">
@@ -43,9 +53,7 @@
                 <h5 class="text-2xl font-semibold mb-2">Hi, Bro IS!</h5>
                 <h1 class="text-7xl font-extrabold mb-2">WELCOME</h1>
                 <h6 class="text-sm">TO XII RPL</h6>
-                @foreach ($slide as $s)
-                    <img src="{{ $s->image_url }}" alt="Deskripsi gambar">
-                @endforeach
+
 
             </div>
         </section>
@@ -136,6 +144,37 @@
             setInterval(changeBackgroundImage, 5000);
         });
     </script>
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSection = document.querySelector('.hero-section');
+            let currentImageIndex = 0;
+            const slides = @json($slides->pluck('image'));
+
+            function changeBackgroundImage() {
+                if (slides.length > 0) {
+                    currentImageIndex = (currentImageIndex + 1) % slides.length;
+                    heroSection.style.backgroundImage = `url('/storage/${slides[currentImageIndex]}')`;
+                }
+            }
+
+            // Set initial background image
+            if (slides.length > 0) {
+                heroSection.style.backgroundImage = `url('/storage/${slides[currentImageIndex]}')`;
+            }
+
+            // Change background image every 5 seconds with transition effect
+            setInterval(changeBackgroundImage, 5000);
+        });
+    </script>
+
+
+
+
 </body>
 
 </html>
