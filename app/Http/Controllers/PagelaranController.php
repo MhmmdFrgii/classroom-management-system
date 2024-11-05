@@ -2,17 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PagelaranRequest;
 use App\Models\Pagelaran;
+use App\Services\PagelaranService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PagelaranController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected $pageralanService;
+
+    public function __construct(PagelaranService $pagelaranService)
+    {
+        $this->pageralanService = $pagelaranService;
+    }
+
     public function index()
     {
-        //
+        $pagelaran = $this->pageralanService->getAllPagelaran();
+        return view('pagelaran.index', compact('pagelaran'));
     }
 
     /**
@@ -26,9 +34,10 @@ class PagelaranController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PagelaranRequest $request)
     {
-        //
+        $this->pageralanService->createPagelaran($request->validated());
+        return redirect()->route('pagelaran.index')->with('success', 'Gaji berhasil di edit');
     }
 
     /**
@@ -50,16 +59,25 @@ class PagelaranController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Pagelaran $pagelaran)
+    public function update(PagelaranRequest $request, $id)
     {
-        //
+        $this->pageralanService->updatePagelaran($id, $request->validated());
+        return redirect()->route('pagelaran.index')->with('success', 'Gaji berhasil di edit');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pagelaran $pagelaran)
+    public function destroy($id)
     {
-        //
+        $pagelaran = Pagelaran::findOrFail($id);
+
+        if ($pagelaran->image) {
+            Storage::disk('public')->delete($pagelaran->image);
+        }
+
+        $this->pageralanService->deletePagelaran($id);
+
+        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
     }
 }
