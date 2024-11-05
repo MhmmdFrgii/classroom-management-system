@@ -18,6 +18,12 @@ class SlideController extends Controller
         $this->slideService = $slideService;
     }
 
+    public function guest()
+    {
+        $slide = $this->slideService->getAllSlide();
+        return view('index', compact('slide'));
+    }
+
     public function index()
     {
         $slide = $this->slideService->getAllSlide();
@@ -47,8 +53,9 @@ class SlideController extends Controller
      */
     public function show(Slide $slide)
     {
-        //
+
     }
+
 
     /**
      * Show the form for editing the specified resource.

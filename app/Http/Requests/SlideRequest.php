@@ -23,7 +23,16 @@ class SlideRequest extends FormRequest
     {
         return [
             'title' => 'nullable',
-            'image' => 'required|mimes:png,jpg,jpeg|max:1024'
+            'image' => 'required|mimes:png,jpg,jpeg|'
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'image.required' => 'Gambar harus diisi!',
+            'image.mimes' => 'File gambar tidak valid!',
+            // 'image.max' => 'Maximal ukuran file gambar 1MB!'
         ];
     }
 }

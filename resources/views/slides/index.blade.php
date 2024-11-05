@@ -133,6 +133,9 @@
                             <div class="mb-3">
                                 <label for="image">Image</label>
                                 <input type="file" id="image" name="image" class="form-control">
+                                @error('image')
+                                    <div class="text-danger text-sm mt-1">{{ $message }}</div>
+                                @enderror
                             </div>
 
 
