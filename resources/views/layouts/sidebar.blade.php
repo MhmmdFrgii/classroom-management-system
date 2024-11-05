@@ -26,7 +26,7 @@
                      </a>
                      <ul class="nav-second-level" aria-expanded="false">
                          <li>
-                             <a href="apps-calendar.html">Pagelaran</a>
+                             <a href="{{ route('pagelaran.index') }}">Pagelaran</a>
                          </li>
                          <li>
                              <a href="apps-contacts.html">Classmeet</a>

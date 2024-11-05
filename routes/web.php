@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagelaranController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SlideController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('slides', SlideController::class);
+    Route::resource('pagelaran', PagelaranController::class);
 });
 
 require __DIR__ . '/auth.php';
