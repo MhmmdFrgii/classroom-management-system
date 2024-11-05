@@ -10,11 +10,23 @@ export default {
     ],
 
     theme: {
+        container : {
+            center: true,
+            padding: "12px",
+        },
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                primary: "#14b8a6",
+                secondary: "#64748b",
+                dark: "#0f172a",
+              },
         },
+        screens: {
+            xl: "1120px",
+        }
     },
 
     plugins: [forms],
