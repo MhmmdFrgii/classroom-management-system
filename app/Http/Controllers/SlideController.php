@@ -2,17 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SlideRequest;
 use App\Models\Slide;
+use App\Services\SlideService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SlideController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
+    protected $slideService;
+
+    public function __construct(SlideService $slideService)
+    {
+        $this->slideService = $slideService;
+    }
+
     public function index()
     {
-        //
+        $slide = $this->slideService->getAllSlide();
+        return view('slides.index', compact('slide'));
     }
 
     /**
@@ -26,10 +35,12 @@ class SlideController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(SlideRequest $request)
     {
-        //
+        $this->slideService->createSlide($request->validated());
+        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
     }
+
 
     /**
      * Display the specified resource.
@@ -50,16 +61,28 @@ class SlideController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Slide $slide)
+    public function update(SlideRequest $request, $id)
     {
-        //
+        $this->slideService->updateSlide($id, $request->validated());
+
+        $slide = $this->slideService->getAllSlide();
+
+        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Slide $slide)
+    public function destroy($id)
     {
-        //
+        $slide = Slide::findOrFail($id);
+
+        if ($slide->image) {
+            Storage::disk('public')->delete($slide->image);
+        }
+
+        $this->slideService->deleteSlide($id);
+
+        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
     }
 }
