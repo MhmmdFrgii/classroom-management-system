@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PagelaranRequest extends FormRequest
+class PlimaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

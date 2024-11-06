@@ -29,16 +29,16 @@
                              <a href="{{ route('pagelaran.index') }}">Pagelaran</a>
                          </li>
                          <li>
-                             <a href="apps-contacts.html">Classmeet</a>
+                             <a href="{{ route('classmeet.index') }}">Classmeet</a>
                          </li>
                          <li>
-                             <a href="apps-tickets.html">P5</a>
+                             <a href="{{ route('plima.index') }}">P5</a>
                          </li>
                      </ul>
                  </li>
 
                  <li>
-                     <a href="javascript: void(0);">
+                     <a href="{{ route('random.index') }}">
                          <i class="la la-clone"></i>
                          <span> Random Pict </span>
                      </a>

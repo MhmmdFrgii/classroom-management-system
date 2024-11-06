@@ -2,24 +2,23 @@
 
 namespace App\Services;
 
-use App\Contracts\Interfaces\Eloquents\PagelaranInterface;
+use App\Contracts\Interfaces\Eloquents\RandomInterface;
 use App\Enums\ImageCategory;
 use App\Traits\UploadTrait;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
-class PagelaranService
+class RandomService
 {
     use UploadTrait;
 
-    protected $pagelaranRepository;
+    protected $randomRepository;
 
-    public function __construct(PagelaranInterface $pagelaranRepository)
+    public function __construct(RandomInterface $randomRepository)
     {
-        $this->pagelaranRepository = $pagelaranRepository;
+        $this->randomRepository = $randomRepository;
     }
-
     /**
      * Mengunggah gambar slide ke folder yang sesuai.
      *
@@ -27,65 +26,65 @@ class PagelaranService
      * @return string
      */
 
-    public function uploadPagelaranImage(UploadedFile $file): string
+    public function uploadRandomImage(UploadedFile $file): string
     {
-        $category = ImageCategory::PAGELARAN;
+        $category = ImageCategory::RANDOM;
         $folder = $category->folderPath();
         return $this->uploadImage($file, $folder);
     }
 
-    public function getAllPagelaran()
+    public function getAllRandom()
     {
         try {
-            return $this->pagelaranRepository->getAll();
+            return $this->randomRepository->getAll();
         } catch (\Exception $e) {
             Log::error('Error fetching slides: ' . $e->getMessage());
             return null;
         }
     }
 
-    public function createPagelaran(array $data)
+    public function createRandom(array $data)
     {
         try {
             // Cek jika ada file gambar di dalam data
             if (isset($data['image']) && $data['image'] instanceof UploadedFile) {
-                $data['image'] = $this->uploadPagelaranImage($data['image']);
+                $data['image'] = $this->uploadRandomImage($data['image']);
             }
 
-            return $this->pagelaranRepository->create($data);
+            return $this->randomRepository->create($data);
         } catch (\Exception $e) {
             Log::error('Error creating slide: ' . $e->getMessage());
             return null;
         }
     }
 
-    public function updatePagelaran($id, array $data)
+    public function updateRandom($id, array $data)
     {
         try {
-            $pagelaran = $this->pagelaranRepository->find($id);
+            $random = $this->randomRepository->find($id);
 
             // Cek apakah ada gambar baru
             if (isset($data['image']) && $data['image'] instanceof UploadedFile) {
                 // Hapus gambar lama jika ada
-                if ($pagelaran->image) {
-                    Storage::disk('public')->delete($pagelaran->image);
+                if ($random->image) {
+                    Storage::disk('public')->delete($random->image);
                 }
                 // Upload gambar baru dan simpan path
-                $data['image'] = $this->uploadPagelaranImage($data['image']);
+                $data['image'] = $this->uploadRandomImage($data['image']);
             }
 
             // Lakukan update dengan data baru
-            return $this->pagelaranRepository->update($id, $data);
+            return $this->randomRepository->update($id, $data);
         } catch (\Exception $e) {
             Log::error('Error updating slide: ' . $e->getMessage());
             return null;
         }
     }
 
-    public function deletePagelaran($id)
+    public function deleteRandom($id)
     {
         try {
-            return $this->pagelaranRepository->delete($id);
+            return $this->randomRepository->delete($id);
         } catch (\Exception $e) {
             Log::error('Error deleting slide: ' . $e->getMessage());
             return null;
