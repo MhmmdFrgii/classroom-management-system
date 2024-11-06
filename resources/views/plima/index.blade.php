@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1>Pagelaran</h1>
+        <h1>P5</h1>
         <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#createModal">
             Create
         </button>
@@ -19,14 +19,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($pagelaran as $data)
+                    @foreach ($plima as $data)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $data->title }}</td>
                             <td>{{ $data->description }}</td>
                             <td>
                                 @if ($data->image)
-                                    <img src="{{ Storage::url($data->image) }}" alt="Pagelaran Image" width="80px">
+                                    <img src="{{ Storage::url($data->image) }}" alt="P5 Image" width="80px">
                                 @else
                                     Tidak ada gambar
                                 @endif
@@ -54,7 +54,7 @@
                                         <button type="button" class="close" data-dismiss="modal"
                                             aria-hidden="true">×</button>
                                     </div>
-                                    <form action="{{ route('pagelaran.update', $data->id) }}" enctype="multipart/form-data"
+                                    <form action="{{ route('plima.update', $data->id) }}" enctype="multipart/form-data"
                                         method="POST">
                                         @csrf
                                         @method('PUT')
@@ -103,7 +103,7 @@
                                         <p>Apa anda yakin menghapus gambar "{{ $data->title }}"</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <form action="{{ route('pagelaran.destroy', $data->id) }}"
+                                        <form action="{{ route('plima.destroy', $data->id) }}"
                                             enctype="multipart/form-data" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -133,7 +133,7 @@
                             <h4 class="modal-title" id="createModalLabel">Create Item</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         </div>
-                        <form action="{{ route('pagelaran.store') }}" enctype="multipart/form-data" method="POST">
+                        <form action="{{ route('plima.store') }}" enctype="multipart/form-data" method="POST">
                             @csrf
                             <div class="modal-body">
                                 <div class="mb-3">
