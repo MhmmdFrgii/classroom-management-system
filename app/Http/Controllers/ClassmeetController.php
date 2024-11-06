@@ -38,7 +38,7 @@ class ClassmeetController extends Controller
     public function store(ClassmeetRequest $request)
     {
         $this->classmeetService->createClassmeet($request->validated());
-        return redirect()->route('classmeet.index')->with('success', 'Berhasil');
+        return redirect()->route('classmeet.index')->with('success', 'Data berhasil disimpan');
     }
 
     /**
@@ -63,7 +63,7 @@ class ClassmeetController extends Controller
     public function update(ClassmeetRequest $request, $id)
     {
         $this->classmeetService->updateClassmeet($id, $request->validated());
-        return redirect()->route('classmeet.index')->with('success', 'Berhasil');
+        return redirect()->route('classmeet.index')->with('success', 'Data berhasil di edit');
     }
 
     /**
@@ -79,6 +79,6 @@ class ClassmeetController extends Controller
 
         $this->classmeetService->deleteClassmeet($id);
 
-        return redirect()->route('classmeet.index')->with('success', 'Berhasil');
+        return redirect()->route('classmeet.index')->with('success', 'Data berhasil dihapus');
     }
 }

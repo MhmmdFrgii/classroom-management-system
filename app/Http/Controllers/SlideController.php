@@ -44,17 +44,14 @@ class SlideController extends Controller
     public function store(SlideRequest $request)
     {
         $this->slideService->createSlide($request->validated());
-        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
+        return redirect()->route('slides.index')->with('success', 'Data berhasil disimpan');
     }
 
 
     /**
      * Display the specified resource.
      */
-    public function show(Slide $slide)
-    {
-
-    }
+    public function show(Slide $slide) {}
 
 
     /**
@@ -74,7 +71,7 @@ class SlideController extends Controller
 
         $slide = $this->slideService->getAllSlide();
 
-        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
+        return redirect()->route('slides.index')->with('success', 'Data berhasil di edit');
     }
 
     /**
@@ -90,6 +87,6 @@ class SlideController extends Controller
 
         $this->slideService->deleteSlide($id);
 
-        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
+        return redirect()->route('slides.index')->with('success', 'Data berhasil di hapus');
     }
 }

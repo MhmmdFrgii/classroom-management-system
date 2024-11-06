@@ -37,7 +37,7 @@ class P5Controller extends Controller
     public function store(PlimaRequest $request)
     {
         $this->plimaService->createPlima($request->validated());
-        return redirect()->route('plima.index')->with('success', 'Berhasil');
+        return redirect()->route('plima.index')->with('success', 'Data berhasil disimpan');
     }
 
     /**
@@ -62,7 +62,7 @@ class P5Controller extends Controller
     public function update(PlimaRequest $request, $id)
     {
         $this->plimaService->updatePlima($id, $request->validated());
-        return redirect()->route('plima.index')->with('success', 'Berhasil');
+        return redirect()->route('plima.index')->with('success', 'Data berhasil di edit');
     }
 
     /**
@@ -78,6 +78,6 @@ class P5Controller extends Controller
 
         $this->plimaService->deletePlima($id);
 
-        return redirect()->route('plima.index')->with('success', 'Berhasil');
+        return redirect()->route('plima.index')->with('success', 'Data berhasil dihapus');
     }
 }

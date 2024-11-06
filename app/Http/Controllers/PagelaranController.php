@@ -37,7 +37,7 @@ class PagelaranController extends Controller
     public function store(PagelaranRequest $request)
     {
         $this->pageralanService->createPagelaran($request->validated());
-        return redirect()->route('pagelaran.index')->with('success', 'Gaji berhasil di edit');
+        return redirect()->route('pagelaran.index')->with('success', 'Data berhasil disimpan');
     }
 
     /**
@@ -62,7 +62,7 @@ class PagelaranController extends Controller
     public function update(PagelaranRequest $request, $id)
     {
         $this->pageralanService->updatePagelaran($id, $request->validated());
-        return redirect()->route('pagelaran.index')->with('success', 'Gaji berhasil di edit');
+        return redirect()->route('pagelaran.index')->with('success', 'Data berhasil di edit');
     }
 
     /**
@@ -78,6 +78,6 @@ class PagelaranController extends Controller
 
         $this->pageralanService->deletePagelaran($id);
 
-        return redirect()->route('slides.index')->with('success', 'Gaji berhasil di edit');
+        return redirect()->route('pagelaran.index')->with('success', 'Data berhasil di hapus');
     }
 }
