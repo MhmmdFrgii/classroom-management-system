@@ -37,7 +37,7 @@ class RandomController extends Controller
     public function store(RandomRequest $request)
     {
         $this->randomService->createRandom($request->validated());
-        return redirect()->route('random.index')->with('success', 'Berhasil');
+        return redirect()->route('random.index')->with('success', 'Data berhasil disimpan');
     }
 
     /**
@@ -62,7 +62,7 @@ class RandomController extends Controller
     public function update(RandomRequest $request, $id)
     {
         $this->randomService->updateRandom($id, $request->validated());
-        return redirect()->route('random.index')->with('success', 'Berhasil');
+        return redirect()->route('random.index')->with('success', 'Data berhasil di edit');
     }
 
     /**
@@ -78,6 +78,6 @@ class RandomController extends Controller
 
         $this->randomService->deleteRandom($id);
 
-        return redirect()->route('random.index')->with('success', 'Berhasil');
+        return redirect()->route('random.index')->with('success', 'Data berhasil dihapus');
     }
 }

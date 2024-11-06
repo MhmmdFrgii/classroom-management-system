@@ -28,6 +28,8 @@
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
+    <link href="assets/libs/jquery-toast/jquery.toast.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -181,6 +183,59 @@
 
     <!-- App js -->
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
+
+    {{-- toast --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/libs/jquery-toast/jquery.toast.min.js"></script>
+
+    <script>
+        @if (session('success'))
+            $.toast({
+                heading: 'Sukses!',
+                text: "{{ session('success') }}",
+                showHideTransition: 'fade',
+                position: 'top-right',
+                icon: 'success',
+            });
+        @endif
+
+        @if (session('danger'))
+            $.toast({
+                heading: 'Error!',
+                text: "{{ session('danger') }}",
+                showHideTransition: 'fade',
+                position: 'top-right',
+                icon: 'error',
+                loaderBg: '#FF0000',
+                bgColor: '#dc3545'
+            });
+        @endif
+
+        @if (session('info'))
+            $.toast({
+                heading: 'Info!',
+                text: "{{ session('info') }}",
+                showHideTransition: 'fade',
+                position: 'top-right',
+                icon: 'info',
+                loaderBg: '#5bc0de',
+                bgColor: '#17a2b8'
+            });
+        @endif
+
+        @if ($errors->any())
+            $.toast({
+                heading: 'Error!',
+                text: "{{ $errors->first() }}",
+                showHideTransition: 'fade',
+                position: 'top-right',
+                icon: 'error',
+                loaderBg: '#FF0000',
+                bgColor: '#dc3545'
+            });
+        @endif
+    </script>
+
 
 </body>
 
