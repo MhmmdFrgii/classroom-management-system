@@ -21,10 +21,11 @@
 
     <x-navbar></x-navbar>
 
-    <div class="w-full">
-        {{ $slot }}
-    </div>
-
+    <main>
+        <div class="mx-auto">
+            {{ $slot }}
+        </div>
+    </main>
 </body>
 
 </html>

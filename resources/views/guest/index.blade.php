@@ -7,19 +7,20 @@
             background-position: center;
         }
     </style>
-    
+
     <!-- Hero Section -->
- <section class="hero-section">
-    {{-- Hero Section with Slideshow --}}
-    <section id="home"
-        class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-slate-200/90 from-20% to-black/70 t0-70%">
-        <div>
-            <h5 class="text-2xl font-semibold mb-2">Hi, Bro IS!</h5>
-            <h1 class="text-7xl font-extrabold mb-2">WELCOME</h1>
-            <h6 class="text-sm">TO XII RPL</h6>
-        </div>
+    <section class="hero-section">
+        {{-- Hero Section with Slideshow --}}
+        <section id="home"
+            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-slate-200/90 from-20% to-black/70 t0-70%">
+            <div>
+                <h5 class="text-2xl font-semibold mb-2">Hi, Bro IS!</h5>
+                <h1 class="text-7xl font-extrabold mb-2">WELCOME</h1>
+                <h6 class="text-sm">TO XII RPL</h6>
+            </div>
+        </section>
     </section>
-</section>
+
     {{-- Section Memory --}}
     <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
         <div class="container">
@@ -31,7 +32,7 @@
             </div>
             <!-- Memory cards (example) -->
             <div class="w-full px-4 flex flex-wrap mx-auto">
-                <a href="#home" class="mb-12 p-3 w-1/3">
+                <a href="{{ route('memorypagelaran') }}" class="mb-12 p-3 w-1/3">
                     <div class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-500">
                         <div class="rounded-lg overflow-hidden">
                             <img src="{{ asset('storage/sampul/image1.jpg') }}" alt="1" class="w-full" />
