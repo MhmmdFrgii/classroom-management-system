@@ -4,6 +4,7 @@ use App\Http\Controllers\ClassmeetController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\P5Controller;
 use App\Http\Controllers\PagelaranController;
+use App\Http\Controllers\PagelaranMemoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RandomController;
 use App\Http\Controllers\SlideController;
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');

@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<x-guest>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>XII RPL</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-
-    <!-- Styles / Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .hero-section {
             transition: background-image 1s ease-in-out;
@@ -22,43 +7,21 @@
             background-position: center;
         }
     </style>
-</head>
-
-<body class="font-sans antialiased">
-
+    
     <!-- Hero Section -->
-    <section class="hero-section">
-        {{-- Header Section --}}
-        <header class="bg-white/30 backdrop-blur-md top-0 left-0 w-full items-center z-20 fixed">
-            <div class="container mx-auto flex justify-between items-center px-4 py-1">
-                <a href="#">
-                    <img src="{{ asset('storage/logo/logo.png') }}" alt="logo" class="w-8 my-2">
-                </a>
-                <nav class="flex space-x-8">
-                    <a href="#home"
-                        class="text-base text-white py-2 hover:text-primary transition duration-300">Home</a>
-                    <a href="#memory"
-                        class="text-base text-white py-2 hover:text-primary transition duration-300">Memory</a>
-                    <a href="#structure"
-                        class="text-base text-white py-2 hover:text-primary transition duration-300">Structure &
-                        Schedule</a>
-                </nav>
-            </div>
-        </header>
-
-        {{-- Hero Section with Slideshow --}}
-        <section id="home"
-            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-black from-20% to-black/70 t0-70%">
-            <div>
-                <h5 class="text-2xl font-semibold mb-2">Hi, Bro IS!</h5>
-                <h1 class="text-7xl font-extrabold mb-2">WELCOME</h1>
-                <h6 class="text-sm">TO XII RPL</h6>
-            </div>
-        </section>
+ <section class="hero-section">
+    {{-- Hero Section with Slideshow --}}
+    <section id="home"
+        class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-slate-200/90 from-20% to-black/70 t0-70%">
+        <div>
+            <h5 class="text-2xl font-semibold mb-2">Hi, Bro IS!</h5>
+            <h1 class="text-7xl font-extrabold mb-2">WELCOME</h1>
+            <h6 class="text-sm">TO XII RPL</h6>
+        </div>
     </section>
-
+</section>
     {{-- Section Memory --}}
-    <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black to-black">
+    <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
@@ -173,7 +136,4 @@
             },
         });
     </script>
-
-</body>
-
-</html>
+</x-guest>
