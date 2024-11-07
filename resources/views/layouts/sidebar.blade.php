@@ -11,9 +11,15 @@
                  <li class="menu-title">Navigation</li>
 
                  <li>
-                     <a href="{{ route('slides.index') }}">
+                     <a href="{{ route('dashboard') }}">
                          <i class="la la-dashboard"></i>
 
+                         <span> Dashboard </span>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="{{ route('slides.index') }}">
+                         <i class="la la-plus-square-o"></i>
                          <span> Slides </span>
                      </a>
                  </li>

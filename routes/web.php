@@ -7,6 +7,7 @@ use App\Http\Controllers\PagelaranController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RandomController;
 use App\Http\Controllers\SlideController;
+use App\Models\Slide;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -16,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
-    return view('pages.dashboard');
+    // Ambil total slide pick
+    $slidePick = Slide::count();
+
+    // Kirim data ke view dashboard
+    return view('pages.dashboard', compact('slidePick'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
