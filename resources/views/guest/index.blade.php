@@ -57,6 +57,7 @@
             </div>
         </section>
     </section>
+    
     {{-- Section Memory --}}
     <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
         <div class="container">

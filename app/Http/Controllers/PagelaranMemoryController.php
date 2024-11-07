@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pagelaran;
 use Illuminate\Http\Request;
 
 class PagelaranMemoryController extends Controller
@@ -11,7 +12,8 @@ class PagelaranMemoryController extends Controller
      */
     public function index()
     {
-        return view('guest.memory-pagelaran');
+        $pagelarans = Pagelaran::all();
+        return view('guest.memory-pagelaran', compact('pagelarans'));
     }
 
     /**

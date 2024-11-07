@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index']);
+Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index'])->name('memorypagelaran');
 
 // Route::get('/dashboard', function () {
 //     // Ambil total slide pick
