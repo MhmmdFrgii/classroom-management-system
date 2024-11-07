@@ -6,6 +6,43 @@
             background-size: cover;
             background-position: center;
         }
+
+        .swiper-slide img {
+            width: 450px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .swiper-pagination-bullets {
+            bottom: 15px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white;
+        }
+
+        .custom-button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .custom-button {
+            background-color: #333;
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-button:hover {
+            background-color: #555;
+        }
     </style>
 
     <!-- Hero Section -->
@@ -20,7 +57,7 @@
             </div>
         </section>
     </section>
-
+    
     {{-- Section Memory --}}
     <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
         <div class="container">
@@ -32,7 +69,7 @@
             </div>
             <!-- Memory cards (example) -->
             <div class="w-full px-4 flex flex-wrap mx-auto">
-                <a href="{{ route('memorypagelaran') }}" class="mb-12 p-3 w-1/3">
+                <a href="#home" class="mb-12 p-3 w-1/3">
                     <div class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-500">
                         <div class="rounded-lg overflow-hidden">
                             <img src="{{ asset('storage/sampul/image1.jpg') }}" alt="1" class="w-full" />
@@ -48,38 +85,33 @@
     {{-- Section Random pick --}}
     <section id="random" class="pt-14 pb-14 bg-gradient-to-b from-gray-800 to-gray-900 text-white">
         <div class="container mx-auto">
-            {{-- <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center pb-10">
-                    <h2 class="font-semibold text-3xl text-white mb-4">Class Gallery</h2>
-                </div>
-            </div> --}}
+            <div class="w-full px-4 text-center pb-10">
+                <h2 class="font-semibold text-3xl text-white mb-4">Class Gallery</h2>
+            </div>
 
             <!-- Swiper Container -->
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper flex justify-center items-center">
+                <div class="swiper-wrapper">
                     @foreach ($randoms as $random)
                         <div class="swiper-slide">
                             @if ($random->image)
-                                <img src="{{ asset('storage/' . $random->image) }}" alt="Class Image"
-                                    class="rounded-lg object-cover w-[450px] h-[350px] mx-auto">
+                                <img src="{{ asset('storage/' . $random->image) }}" alt="Class Image">
                             @else
                                 <p class="text-center text-gray-300">Tidak ada gambar</p>
                             @endif
                         </div>
                     @endforeach
                 </div>
-                <!-- Pagination and Navigation -->
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
 
-            <!-- Optional Buttons -->
-            {{-- <div class="flex justify-center gap-4 mt-6">
-                <button class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded">Send</button>
-                <button
-                    class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded">Request</button>
-            </div> --}}
+            <!-- Optional Custom Buttons -->
+            <div class="custom-button-container">
+                <button class="custom-button">Send</button>
+                <button class="custom-button">Request</button>
+            </div>
         </div>
     </section>
 
@@ -114,18 +146,15 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script>
-        // Initialize Swiper
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3, // Display 3 images at once
-            spaceBetween: 15, // Space between images
-            loop: true, // Enable infinite loop
-            loopFillGroupWithBlank: false, // Prevent blank slides at the end
-            centeredSlides: true, // Center the active slide
-            autoplay: { // Set autoplay options
-                delay: 3000, // Delay in milliseconds
-                disableOnInteraction: true // Autoplay won't stop on user interaction
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
             },
             pagination: {
                 el: ".swiper-pagination",
