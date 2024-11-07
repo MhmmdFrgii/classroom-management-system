@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Random;
 use App\Models\Slide;
 use Illuminate\Http\Request;
 
@@ -12,8 +13,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $randoms = Random::all();
         $slides = Slide::all(); // Mengambil semua data slides dari database
-        return view('index', compact('slides')); // Mengirim data slides ke view
+        // dd($random);
+        return view('index', compact('slides', 'randoms')); // Mengirim data slides ke view
     }
 
     /**
