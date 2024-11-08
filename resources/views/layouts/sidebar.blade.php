@@ -49,6 +49,14 @@
                          <span> Random Pict </span>
                      </a>
                  </li>
+                 @role('super admin')
+                     <li>
+                         <a href="{{ route('users.index') }}">
+                             <i class="fas fa-address-book"></i>
+                             <span> Users </span>
+                         </a>
+                     </li>
+                 @endrole
 
 
 
