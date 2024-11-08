@@ -2,33 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Style for Background Slideshow  */
 .hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    transition: background-image 1s ease-in-out;
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease-in-out;
 }
 
-/* .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(130, 155, 161, 0.459),
-        rgba(0, 0, 0, 0.8)
-    );
-    z-index: 1;
+.swiper-slide img {
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.hero-section #home > div {
-    position: relative;
-    z-index: 2;
-} */
+.swiper-pagination-bullets {
+    bottom: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+}
+
+.custom-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.custom-button {
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #555;
+}
+
+/* resources/css/app.css */
+.anton-sc-regular {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* resources/css/app.css */
+.inter-light {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.bg-gradient-animation {
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}

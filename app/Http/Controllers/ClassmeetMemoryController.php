@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pagelaran;
+use App\Models\Classmeet;
 use Illuminate\Http\Request;
 
-class PagelaranMemoryController extends Controller
+class ClassmeetMemoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $pagelarans = Pagelaran::all();
-        return view('guest.memory-pagelaran', compact('pagelarans'));
+        $classmeet = Classmeet::all();
+        return view('guest.memory-classmeet', compact('classmeet'));
     }
 
     /**
