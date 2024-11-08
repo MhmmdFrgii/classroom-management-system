@@ -10,6 +10,7 @@ use App\Http\Controllers\PagelaranMemoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RandomController;
 use App\Http\Controllers\SlideController;
+use App\Http\Controllers\UserController;
 use App\Models\Slide;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('index');
 // });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('guest');
 Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index'])->name('memorypagelaran');
 Route::get('/memoryclassmeet', [ClassmeetMemoryController::class, 'index'])->name('memoryclassmeet');
+
 
 // Route::get('/dashboard', function () {
 //     // Ambil total slide pick
@@ -41,6 +44,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('classmeet', ClassmeetController::class);
     Route::resource('plima', P5Controller::class);
     Route::resource('random', RandomController::class);
+
+    Route::middleware('role:super admin')->group(function () {
+        Route::resource('users', UserController::class);
+    });
 });
 
 require __DIR__ . '/auth.php';
