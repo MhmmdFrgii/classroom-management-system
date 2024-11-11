@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pagelaran;
+use App\Models\P5;
 use Illuminate\Http\Request;
 
-class PagelaranMemoryController extends Controller
+class P5MemoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $pagelarans = Pagelaran::all();
-        return view('guest.memory.memory-pagelaran', compact('pagelarans'));
+        $p5 = P5::all();
+        return view('guest.memory.memory-p5', compact('p5'));
     }
 
     /**

@@ -74,14 +74,8 @@
     font-style: normal;
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.bg-gradient-animation {
-    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
+.active-link {
+    color: #38b2ac; /* Teal */
+    text-decoration: underline;
+    text-decoration-color: #38b2ac;
 }

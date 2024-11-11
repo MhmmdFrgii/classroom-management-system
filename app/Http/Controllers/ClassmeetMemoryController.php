@@ -13,7 +13,7 @@ class ClassmeetMemoryController extends Controller
     public function index()
     {
         $classmeet = Classmeet::all();
-        return view('guest.memory-classmeet', compact('classmeet'));
+        return view('guest.memory.memory-classmeet', compact('classmeet'));
     }
 
     /**

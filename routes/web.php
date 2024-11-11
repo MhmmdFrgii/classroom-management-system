@@ -4,7 +4,9 @@ use App\Http\Controllers\ClassmeetController;
 use App\Http\Controllers\ClassmeetMemoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MemoryController;
 use App\Http\Controllers\P5Controller;
+use App\Http\Controllers\P5MemoryController;
 use App\Http\Controllers\PagelaranController;
 use App\Http\Controllers\PagelaranMemoryController;
 use App\Http\Controllers\ProfileController;
@@ -20,17 +22,19 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('guest');
-// Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index'])->name('memorypagelaran');
-// Route::get('/memoryclassmeet', [ClassmeetMemoryController::class, 'index'])->name('memoryclassmeet');
+Route::get('/memory', [MemoryController::class, 'index'])->name('memory')->middleware('guest');
+Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index'])->name('memorypagelaran');
+Route::get('/memoryclassmeet', [ClassmeetMemoryController::class, 'index'])->name('memoryclassmeet');
+Route::get('/memoryp5', [P5MemoryController::class, 'index'])->name('memoryp5');
 
 
-// Route::get('/dashboard', function () {
-//     // Ambil total slide pick
-//     $slidePick = Slide::count();
+Route::get('/dashboard', function () {
+    // Ambil total slide pick
+    $slidePick = Slide::count();
 
-//     // Kirim data ke view dashboard
-//     return view('pages.dashboard', compact('slidePick'));
-// })->middleware(['auth', 'verified'])->name('dashboard');
+    // Kirim data ke view dashboard
+    return view('pages.dashboard', compact('slidePick'));
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
