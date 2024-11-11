@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('guest');
-Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index'])->name('memorypagelaran');
-Route::get('/memoryclassmeet', [ClassmeetMemoryController::class, 'index'])->name('memoryclassmeet');
+// Route::get('/memorypagelaran', [PagelaranMemoryController::class, 'index'])->name('memorypagelaran');
+// Route::get('/memoryclassmeet', [ClassmeetMemoryController::class, 'index'])->name('memoryclassmeet');
 
 
 // Route::get('/dashboard', function () {
