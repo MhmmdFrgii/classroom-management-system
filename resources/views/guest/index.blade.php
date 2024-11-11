@@ -3,7 +3,7 @@
     <section class="hero-section">
         {{-- Hero Section with Slideshow --}}
         <section id="home"
-            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-slate-200/90 from-20% to-black/70 t0-70%">
+            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-black from-10% to-black/70 t0-80%">
             <div>
                 <h5 class="text-2xl font-anton mb-2">Hi, Bro IS!</h5>
                 <h1 class="text-7xl font-anton mb-2">WELCOME</h1>
@@ -13,7 +13,7 @@
     </section>
 
     {{-- Section Memory --}}
-    <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
+    {{-- <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
@@ -40,7 +40,7 @@
                         <h3 class="text-xl font-sans text-dark pt-10 mb-3 text-center">Classmeet Pick</h3>
                     </div>
                 </a>
-                <a href="{{ route('memorypagelaran') }}" class="mb-12 p-3 w-1/3">
+                <a href="{{ route('memoryp5') }}" class="mb-12 p-3 w-1/3">
                     <div class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-500">
                         <div class="rounded-lg overflow-hidden">
                             <img src="{{ asset('storage/sampul/image1.jpg') }}" alt="1" class="w-full" />
@@ -51,11 +51,11 @@
                 <!-- Add more cards here as needed -->
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- Section Random pick --}}
-    <section id="random" class="pt-14 pb-14 bg-gradient-to-b from-gray-800 to-gray-900 text-white">
-        <div class="container mx-auto">
+    <section id="random" class="pt-14 pb-14 bg-black text-white w-full">
+        <div class="p-10 mx-auto">
             <div class="w-full px-4 text-center pb-10">
                 <h2 class="inter-bold text-3xl text-white mb-4">Random Pick</h2>
             </div>

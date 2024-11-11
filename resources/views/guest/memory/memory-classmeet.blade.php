@@ -1,5 +1,5 @@
 <x-guest>
-    <section class="w-full min-h-screen flex items-center justify-center bg-gradient-animation">
+    <section class="w-full min-h-screen flex items-center justify-center">
         <div class="container">
             <div class="w-full px-4">
                 <h1 class="text-7xl font-anton text-slate-200 text-center">
@@ -15,10 +15,10 @@
 
     <section class="w-full mx-auto min-h-screen flex items-center justify-center text-center text-white bg-black">
         {{-- Galeri Pagelaran --}}
-        <div class="mx-auto p-8 grid grid-cols-3 gap-4">
+        <div class="mx-auto p-8 grid grid-cols-4 gap-4">
             @foreach ($classmeet as $index => $cm)
                 <div
-                    class="relative overflow-hidden group
+                    class="relative overflow-hidden group rounded-xl
                     @if ($index == 0) col-span-1 row-span-2 @endif
                     @if ($index == 1 || $index == 2) col-span-2 row-span-2 @endif
                     @if ($index == 3) col-span-1 row-span-1 @endif">

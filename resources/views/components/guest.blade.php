@@ -25,7 +25,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased h-full bg-slate-100">
+<body class="font-sans antialiased h-full">
 
     <x-navbar></x-navbar>
 
@@ -33,7 +33,7 @@
         <div class="mx-auto w-full">
             {{ $slot }}
         </div>
-
-       
+    </main>
 </body>
+
 </html>
