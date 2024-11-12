@@ -12,8 +12,9 @@ class P5MemoryController extends Controller
      */
     public function index()
     {
+        $p5Image = P5::first();
         $p5 = P5::all();
-        return view('guest.memory.memory-p5', compact('p5'));
+        return view('guest.memory.memory-p5', compact('p5', 'p5Image'));
     }
 
     /**

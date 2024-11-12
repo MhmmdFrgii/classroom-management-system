@@ -12,8 +12,9 @@ class ClassmeetMemoryController extends Controller
      */
     public function index()
     {
+        $classmeetImage = Classmeet::first();
         $classmeet = Classmeet::all();
-        return view('guest.memory.memory-classmeet', compact('classmeet'));
+        return view('guest.memory.memory-classmeet', compact('classmeet', 'classmeetImage'));
     }
 
     /**

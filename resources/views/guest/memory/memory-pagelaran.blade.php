@@ -1,17 +1,14 @@
 <x-guest>
-    <section class="w-full min-h-screen flex items-center justify-center">
-        <div class="container">
-            <div class="w-full px-4">
-                <h1 class="text-7xl font-anton text-slate-200 text-center">
-                    Galery Pagelaran XII RPL
-                </h1>
-                <p class="inter-regular text-3xl text-slate-200 text-center">Selamat Menikmati</p>
-            </div>
+    {{-- Hero Section with Slideshow --}}
+    <section
+        class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-cover bg-center"
+        style="background-image: url('{{ $pagelaransImage ? asset('storage/' . $pagelaransImage->image) : asset('storage/default_image.jpg') }}'); background-size: cover;">
+        <div
+            class="bg-gradient-to-t from-black from-20% to-black/70 to-80% w-full h-full flex flex-col items-center justify-center">
+            <h5 class="text-3xl font-anton text-primary mb-4 tracking-wide">Galery</h5>
+            <h1 class="text-9xl font-anton mb-4 glow-text tracking-normal uppercase">Pagelaran</h1>
         </div>
     </section>
-
-
-
 
     <section class="w-full mx-auto min-h-screen flex items-center justify-center text-center text-white bg-black">
         {{-- Galeri Pagelaran --}}

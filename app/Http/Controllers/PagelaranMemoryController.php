@@ -12,8 +12,9 @@ class PagelaranMemoryController extends Controller
      */
     public function index()
     {
+        $pagelaransImage = Pagelaran::first();
         $pagelarans = Pagelaran::all();
-        return view('guest.memory.memory-pagelaran', compact('pagelarans'));
+        return view('guest.memory.memory-pagelaran', compact('pagelarans', 'pagelaransImage'));
     }
 
     /**

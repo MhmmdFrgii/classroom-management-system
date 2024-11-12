@@ -3,14 +3,15 @@
     <section class="hero-section">
         {{-- Hero Section with Slideshow --}}
         <section id="home"
-            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-black from-10% to-black/70 t0-80%">
+            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-black from-10% to-black/70">
             <div>
-                <h5 class="text-2xl font-anton mb-2">Hi, Bro IS!</h5>
-                <h1 class="text-7xl font-anton mb-2">WELCOME</h1>
-                <h6 class="text-sm inter-bold">TO XII RPL</h6>
+                <h5 class="text-3xl font-anton mb-4  tracking-wide">Hi, Bro IS!</h5>
+                <h1 class="text-9xl font-anton mb-4 glow-text tracking-normal uppercase">WELLCOME</h1>
+                <h6 class="text-xl inter-sans mb-4 tracking-wider">TO XII RPL</h6>
             </div>
         </section>
     </section>
+
 
     {{-- Section Memory --}}
     {{-- <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
