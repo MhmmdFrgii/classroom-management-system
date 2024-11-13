@@ -56,38 +56,92 @@
             </div>
 
             <!-- Sections -->
-            <div id="structure" class="section w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold mb-4">Structure</h2>
-                <p class="text-gray-300 mb-4">Wali Kelas</p>
+            <div id="structure" class="section w-full max-w-2xl mx-auto p-8 bg-gray-900 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-center mb-4 text-white">Structure</h2>
+
+                <!-- Wali Kelas -->
+                <p class="text-gray-300 text-center mb-1">Wali Kelas</p>
                 <div class="flex flex-col items-center space-y-4">
-                    <div class="bg-white text-black px-4 py-2 rounded-full">Abdul Wahab S.Pd</div>
-                    <div class="border-l-2 border-gray-500 h-10"></div>
-                    <div class="flex justify-between w-full px-10">
+                    <div class="bg-gray-300 text-black px-4 py-2 rounded-full">Siti Shofiyah S.Pd.I</div>
+
+                    <!-- Garis Vertikal -->
+                    <div class="flex flex-col items-center">
+                        <svg width="30" height="50">
+                            <line x1="15" y1="0" x2="15" y2="50" stroke="white"
+                                stroke-width="1" />
+                        </svg>
+
+                        <!-- Garis Horizontal -->
+                        <div class="flex items-start">
+                            <svg width="500" height="30">
+                                <line x1="0" y1="0" x2="500" y2="0" stroke="white"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+
+                        <!-- Garis Kiri dan Kanan dengan Bulatan -->
+                        <div class="flex justify-between w-full -translate-y-7">
+                            <svg width="30" height="25">
+                                <line x1="0" y1="0" x2="0" y2="25" stroke="white"
+                                    stroke-width="2" />
+                            </svg>
+                            <svg width="30" height="25">
+                                <line x1="30" y1="0" x2="30" y2="25" stroke="white"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+
+                        {{-- circle --}}
+                        <div class="flex justify-between w-full -translate-y-10">
+                            <svg width="20" height="30">
+                                <circle cx="0" cy="15" r="4" fill="white" />
+                            </svg>
+                            <svg width="20" height="30">
+                                <circle cx="15" cy="15" r="4" fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Ketua dan Wakil Ketua -->
+                    <div class="flex justify-between w-full px-10 mt-6">
                         <div class="text-center">
                             <p class="text-gray-300">Ketua Kelas</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Putry</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Hafizh</div>
                         </div>
                         <div class="text-center">
                             <p class="text-gray-300">Wakil Ketua</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Jeriko</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Fikri</div>
                         </div>
                     </div>
+
+                    <!-- Garis Vertikal Bawah -->
+                    <svg width="30" height="50">
+                        <line x1="15" y1="0" x2="15" y2="50" stroke="white"
+                            stroke-width="1" />
+                    </svg>
+
+                    <!-- Sekretaris dan Bendahara -->
                     <div class="flex justify-between w-full px-10 mt-6">
                         <div class="text-center">
                             <p class="text-gray-300">Sekretaris</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Pratiwi</div>
-                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Paulista</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Fabian</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Izra</div>
                         </div>
                         <div class="text-center">
                             <p class="text-gray-300">Bendahara</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Lista</div>
-                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Davina</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Romo</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Indra</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="schedule" class="section hidden w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
+
+
+
+
+            <div id="schedule"
+                class="section hidden w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
                 <h2 class="text-2xl font-semibold mb-4">Schedule</h2>
                 <p class="text-gray-300">Content for Schedule</p>
                 <!-- Isi jadwal kelas di sini -->
