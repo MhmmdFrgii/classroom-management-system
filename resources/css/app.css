@@ -10,7 +10,7 @@
 
 .swiper-slide img {
     width: 450px;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -19,7 +19,7 @@
 .swiper-pagination {
     display: flex;
     justify-content: center; /* Memastikan pagination berada di tengah */
-    gap: 30px; /* Memberikan jarak antar bullet */
+    gap: 20px; /* Memberikan jarak antar bullet */
 }
 
 /* Ubah warna dasar bullet ke abu-abu */
