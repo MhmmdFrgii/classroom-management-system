@@ -14,9 +14,9 @@
 
     {{-- Section Random pick --}}
     <section id="random" class="pt-14 pb-14 bg-black text-white w-full">
-        <div class="p-10 mx-auto">
+        <div class="relative p-10 mx-auto">
             <div class="w-full px-4 text-center pb-10">
-                <h2 class="inter-bold text-3xl text-white mb-4" data-aos="fade-up" data-aos-duration="">Random Pick</h2>
+                <h2 class="inter-bold text-3xl text-white mb-4">Random Pick</h2>
             </div>
 
             <!-- Swiper Container -->
@@ -32,10 +32,11 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+
+                {{-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> --}}
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
