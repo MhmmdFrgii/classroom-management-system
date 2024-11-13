@@ -1,16 +1,14 @@
 <x-guest>
-    <section class="w-full min-h-screen flex items-center justify-center">
-        <div class="container">
-            <div class="w-full px-4">
-                <h1 class="text-7xl font-anton text-slate-200 text-center">
-                    Galery P5 XII RPL
-                </h1>
-                <p class="inter-regular text-3xl text-slate-200 text-center">Selamat Menikmati</p>
-            </div>
+    {{-- Hero Section with Slideshow --}}
+    <section
+        class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-cover bg-center"
+        style="background-image: url('{{ $p5Image ? asset('storage/' . $p5Image->image) : asset('storage/default_image.jpg') }}'); background-size: cover;">
+        <div
+            class="bg-gradient-to-t from-black from-20% to-black/70 to-80% w-full h-full flex flex-col items-center justify-center">
+            <h5 class="text-3xl font-anton text-primary mb-4 tracking-wide">Galery</h5>
+            <h1 class="text-9xl font-anton mb-4 glow-text tracking-normal uppercase">P5</h1>
         </div>
     </section>
-
-
 
 
     <section class="w-full mx-auto min-h-screen flex items-center justify-center text-center text-white bg-black">
@@ -19,7 +17,7 @@
             @foreach ($p5 as $index => $p)
                 <div
                     class="relative overflow-hidden group rounded-xl
-                    @if ($index == 0)  col-span-3 h-[400px] object-cover @endif
+                    @if ($index == 0) col-span-3 h-[400px] object-cover @endif
                     @if ($index == 1) row-span-2 @endif
                     @if ($index == 2) col-span-2 @endif
                     @if ($index == 3) col-span-1 row-span-1 @endif">

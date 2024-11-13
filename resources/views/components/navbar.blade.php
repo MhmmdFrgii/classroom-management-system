@@ -3,15 +3,10 @@
     class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-500/50 backdrop-blur-md w-[400px] items-center z-20 rounded-2xl">
     <div class="container flex justify-center text-center items-center px-4 py-1">
         <nav class="flex space-x-8">
-            <a href="{{ route('home') }}" id="home-link" class="nav-link text-xl font-bold text-white py-2">Home</a>
+            <a href="{{ route('home') }}" id="home-link" class="nav-link text-xl font-bold text-white py-2">Beranda</a>
             <a href="{{ route('memory') }}" id="memory-link" class="nav-link text-xl font-bold text-white py-2">Memory</a>
-<<<<<<< Updated upstream
-            <a href="#structure" id="structure-link" class="nav-link text-xl font-bold text-white py-2">Structure &
-                Schedule</a>
-=======
-            <a href="#ss" id="ss-link" class="nav-link text-xl font-bold text-white py-2">Struktur &
+            <a href="#structure" id="structure-link" class="nav-link text-xl font-bold text-white py-2">Struktur &
                 Jadwal</a>
->>>>>>> Stashed changes
         </nav>
     </div>
 </header>
