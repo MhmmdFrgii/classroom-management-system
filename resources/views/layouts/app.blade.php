@@ -28,7 +28,7 @@
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="assets/libs/jquery-toast/jquery.toast.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/libs/jquery-toast/jquery.toast.min.css') }}" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -86,7 +86,7 @@
 
     {{-- toast --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="assets/libs/jquery-toast/jquery.toast.min.js"></script>
+    <script src="{{ asset('assets/libs/jquery-toast/jquery.toast.min.js') }}"></script>
 
     <script>
         @if (session('success'))
