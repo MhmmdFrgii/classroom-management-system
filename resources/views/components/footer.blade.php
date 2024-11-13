@@ -9,24 +9,24 @@
                     </a>
                 </div>
                 <div>
-                    <h2 class="mb-4 text-sm font-semibold uppercase">Created By</h2>
-                    <ul class="text-gray-400 font-medium">
-                        <li class="mb-2">
-                            <a href="https://www.instagram.com/ekizr_/?hl=id" class="hover:underline uppercase">
+                    <h2 class="mb-2 text-sm font-semibold uppercase">Created By</h2>
+                    <ul class="text-gray-400 font-base text-sm">
+                        <li class="mb-1">
+                            <a href="#" class="hover:underline uppercase">
                                 Firgi
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/dafyall/?hl=id" class="hover:underline uppercase">
+                            <a href="#" class="hover:underline uppercase">
                                 Satria
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-4 text-sm font-semibold uppercase">Follow Us</h2>
-                    <ul class="text-gray-400 font-medium">
-                        <li class="mb-2">
+                    <h2 class="mb-2 text-sm font-semibold uppercase">Follow Us</h2>
+                    <ul class="text-gray-400 font-base text-sm">
+                        <li class="mb-1">
                             <a href="https://www.instagram.com/acetkjthree/?hl=id" class="hover:underline">
                                 Instagram
                             </a>
