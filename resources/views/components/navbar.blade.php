@@ -5,8 +5,13 @@
         <nav class="flex space-x-8">
             <a href="{{ route('home') }}" id="home-link" class="nav-link text-xl font-bold text-white py-2">Home</a>
             <a href="{{ route('memory') }}" id="memory-link" class="nav-link text-xl font-bold text-white py-2">Memory</a>
+<<<<<<< Updated upstream
             <a href="#structure" id="structure-link" class="nav-link text-xl font-bold text-white py-2">Structure &
                 Schedule</a>
+=======
+            <a href="#ss" id="ss-link" class="nav-link text-xl font-bold text-white py-2">Struktur &
+                Jadwal</a>
+>>>>>>> Stashed changes
         </nav>
     </div>
 </header>
@@ -70,8 +75,8 @@
         // Menambahkan kelas 'active-link' ke link yang sesuai berdasarkan path
         if (path.includes('/memory')) { // Jika URL mengandung /memory
             document.getElementById('memory-link').classList.add('active-link');
-        } else if (path.includes('#structure')) { // Jika URL mengandung #structure
-            document.getElementById('structure-link').classList.add('active-link');
+        } else if (path.includes('#ss')) { // Jika URL mengandung #ss
+            document.getElementById('ss-link').classList.add('active-link');
         } else {
             document.getElementById('home-link').classList.add('active-link');
         }
