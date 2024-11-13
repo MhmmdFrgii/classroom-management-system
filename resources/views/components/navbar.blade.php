@@ -70,8 +70,8 @@
         // Menambahkan kelas 'active-link' ke link yang sesuai berdasarkan path
         if (path.includes('/memory')) { // Jika URL mengandung /memory
             document.getElementById('memory-link').classList.add('active-link');
-        } else if (path.includes('#structure')) { // Jika URL mengandung #structure
-            document.getElementById('structure-link').classList.add('active-link');
+        } else if (path.includes('#ss')) { // Jika URL mengandung #ss
+            document.getElementById('ss-link').classList.add('active-link');
         } else {
             document.getElementById('home-link').classList.add('active-link');
         }

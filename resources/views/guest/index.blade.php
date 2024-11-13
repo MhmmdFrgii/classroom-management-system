@@ -12,53 +12,11 @@
         </section>
     </section>
 
-
-    {{-- Section Memory --}}
-    {{-- <section id="memory" class="pt-36 pb-56 shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="inter-bold text-lg text-primary mb-2">Memory</h4>
-                    <h2 class="inter-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Rekayasa Perangkat Lunak
-                    </h2>
-                </div>
-            </div>
-            <!-- Memory cards (example) -->
-            <div class="w-full px-4 flex flex-wrap mx-auto">
-                <a href="{{ route('memorypagelaran') }}" class="mb-12 p-3 w-1/3">
-                    <div class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-500">
-                        <div class="rounded-lg overflow-hidden">
-                            <img src="{{ asset('storage/sampul/image1.jpg') }}" alt="1" class="w-full" />
-                        </div>
-                        <h3 class="text-xl font-sans text-dark pt-10 mb-3 text-center">Pagelaran Pick</h3>
-                    </div>
-                </a>
-                <a href="{{ route('memoryclassmeet') }}" class="mb-12 p-3 w-1/3">
-                    <div class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-500">
-                        <div class="rounded-lg overflow-hidden">
-                            <img src="{{ asset('storage/sampul/image1.jpg') }}" alt="1" class="w-full" />
-                        </div>
-                        <h3 class="text-xl font-sans text-dark pt-10 mb-3 text-center">Classmeet Pick</h3>
-                    </div>
-                </a>
-                <a href="{{ route('memoryp5') }}" class="mb-12 p-3 w-1/3">
-                    <div class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-500">
-                        <div class="rounded-lg overflow-hidden">
-                            <img src="{{ asset('storage/sampul/image1.jpg') }}" alt="1" class="w-full" />
-                        </div>
-                        <h3 class="text-xl font-sans text-dark pt-10 mb-3 text-center">P5 Pick</h3>
-                    </div>
-                </a>
-                <!-- Add more cards here as needed -->
-            </div>
-        </div>
-    </section> --}}
-
     {{-- Section Random pick --}}
     <section id="random" class="pt-14 pb-14 bg-black text-white w-full">
         <div class="p-10 mx-auto">
             <div class="w-full px-4 text-center pb-10">
-                <h2 class="inter-bold text-3xl text-white mb-4">Random Pick</h2>
+                <h2 class="inter-bold text-3xl text-white mb-4" data-aos="fade-up" data-aos-duration="">Random Pick</h2>
             </div>
 
             <!-- Swiper Container -->
@@ -78,21 +36,65 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-
-            <!-- Optional Custom Buttons -->
-            {{-- <div class="custom-button-container">
-                <button class="custom-button">Send</button>
-                <button class="custom-button">Request</button>
-            </div> --}}
         </div>
     </section>
 
-    {{-- Section Jadwan & strucktur --}}
-    <section id="jadwal" class="pt-36 pb-56">
-        <div class="container">
+    <section id="ss" class="pt-36 min-h-screen">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold mb-6">Structure & Schedule</h1>
 
+            <!-- Toggle Buttons -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <button onclick="showSection('structure')"
+                    class="toggle-button px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
+                    Structure
+                </button>
+                <button onclick="showSection('schedule')"
+                    class="toggle-button px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
+                    Schedule
+                </button>
+            </div>
+
+            <!-- Sections -->
+            <div id="structure" class="section w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Structure</h2>
+                <p class="text-gray-300 mb-4">Wali Kelas</p>
+                <div class="flex flex-col items-center space-y-4">
+                    <div class="bg-white text-black px-4 py-2 rounded-full">Abdul Wahab S.Pd</div>
+                    <div class="border-l-2 border-gray-500 h-10"></div>
+                    <div class="flex justify-between w-full px-10">
+                        <div class="text-center">
+                            <p class="text-gray-300">Ketua Kelas</p>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Putry</div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-gray-300">Wakil Ketua</p>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Jeriko</div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full px-10 mt-6">
+                        <div class="text-center">
+                            <p class="text-gray-300">Sekretaris</p>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Pratiwi</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Paulista</div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-gray-300">Bendahara</p>
+                            <div class="bg-white text-black px-4 py-2 rounded-full">Lista</div>
+                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Davina</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="schedule" class="section hidden w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Schedule</h2>
+                <p class="text-gray-300">Content for Schedule</p>
+                <!-- Isi jadwal kelas di sini -->
+            </div>
         </div>
     </section>
+
 
     <!-- JavaScript for Background Slideshow -->
     <script>
@@ -137,5 +139,24 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+    </script>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            // Update button styles
+            document.querySelectorAll('.toggle-button').forEach(button => {
+                button.classList.remove('bg-gray-600', 'active:bg-gray-500');
+                button.classList.add('bg-gray-700');
+            });
+            event.target.classList.add('bg-gray-600');
+        }
     </script>
 </x-guest>
