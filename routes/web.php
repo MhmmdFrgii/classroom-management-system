@@ -28,26 +28,20 @@ Route::get('/memoryclassmeet', [ClassmeetMemoryController::class, 'index'])->nam
 Route::get('/memoryp5', [P5MemoryController::class, 'index'])->name('memoryp5');
 
 
-Route::get('/dashboard', function () {
-    // Ambil total slide pick
-    $slidePick = Slide::count();
-
-    // Kirim data ke view dashboard
-    return view('pages.dashboard', compact('slidePick'));
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::resource('slides', SlideController::class);
-    Route::resource('pagelaran', PagelaranController::class);
-    Route::resource('classmeet', ClassmeetController::class);
-    Route::resource('plima', P5Controller::class);
-    Route::resource('random', RandomController::class);
+    Route::prefix('admin')->group(function () {
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+        Route::resource('slides', SlideController::class);
+        Route::resource('pagelaran', PagelaranController::class);
+        Route::resource('classmeet', ClassmeetController::class);
+        Route::resource('plima', P5Controller::class);
+        Route::resource('random', RandomController::class);
+    });
 
     Route::middleware('role:super admin')->group(function () {
         Route::resource('users', UserController::class);
