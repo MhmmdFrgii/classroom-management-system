@@ -5,7 +5,7 @@
         <nav class="flex space-x-8">
             <a href="{{ route('home') }}" id="home-link" class="nav-link text-xl font-bold text-white py-2">Beranda</a>
             <a href="{{ route('memory') }}" id="memory-link" class="nav-link text-xl font-bold text-white py-2">Memory</a>
-            <a href="#structure" id="structure-link" class="nav-link text-xl font-bold text-white py-2">Struktur &
+            <a href="#ss" id="ss-link" class="nav-link text-xl font-bold text-white py-2">Struktur &
                 Jadwal</a>
         </nav>
     </div>
