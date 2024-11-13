@@ -5,9 +5,9 @@
         <section id="home"
             class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-black from-10% to-black/70">
             <div>
-                <h5 class="text-2xl font-anton mb-1  tracking-wide">Hi, Bro IS!</h5>
-                <h1 class="text-7xl font-anton mb-2 glow-text tracking-normal uppercase">WELLCOME</h1>
-                <h6 class="text- md-sans tracking-wider">TO XII RPL</h6>
+                <h5 class="text-3xl font-anton mb-4  tracking-wide">Hi, Bro IS!</h5>
+                <h1 class="text-9xl font-anton mb-4 glow-text tracking-normal uppercase">WELLCOME</h1>
+                <h6 class="text-xl inter-sans mb-4 tracking-wider">TO XII RPL</h6>
             </div>
         </section>
     </section>
@@ -15,8 +15,8 @@
     {{-- Section Random pick --}}
     <section id="random" class="pt-14 pb-14 bg-black text-white w-full">
         <div class="relative p-10 mx-auto">
-            <div class="w-full px-4 text-center pb-5">
-                <h2 class="inter-bold text-3xl text-white mb-1">Random Pick</h2>
+            <div class="w-full px-4 text-center pb-10">
+                <h2 class="inter-bold text-3xl text-white mb-4">Random Pick</h2>
             </div>
 
             <!-- Swiper Container -->
