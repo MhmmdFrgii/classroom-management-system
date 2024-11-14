@@ -49,6 +49,22 @@
                          <span> Random Pict </span>
                      </a>
                  </li>
+
+                 <li>
+                     <a href="{{ route('jadwal-pelajaran.index') }}">
+                         <i class=" fas fa-coffee "></i>
+                         <span> Jadwal Pelajaran </span>
+                     </a>
+                 </li>
+
+                 <li>
+                     <a href="{{ route('jadwal-piket.index') }}">
+                         <i class=" la la-code-fork "></i>
+                         <span> Jadwal Piket </span>
+                     </a>
+                 </li>
+
+
                  @role('super admin')
                      <li>
                          <a href="{{ route('users.index') }}">

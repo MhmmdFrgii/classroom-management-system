@@ -9,6 +9,8 @@ use App\Http\Controllers\P5Controller;
 use App\Http\Controllers\P5MemoryController;
 use App\Http\Controllers\PagelaranController;
 use App\Http\Controllers\PagelaranMemoryController;
+use App\Http\Controllers\PelajaranController;
+use App\Http\Controllers\PiketController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RandomController;
 use App\Http\Controllers\SlideController;
@@ -43,6 +45,8 @@ Route::middleware('auth')->group(function () {
         Route::resource('classmeet', ClassmeetController::class);
         Route::resource('plima', P5Controller::class);
         Route::resource('random', RandomController::class);
+        Route::resource('jadwal-piket', PiketController::class);
+        Route::resource('jadwal-pelajaran', PelajaranController::class);
     });
 
     Route::middleware('role:super admin')->group(function () {
