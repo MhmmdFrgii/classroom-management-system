@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pelajaran;
+use App\Models\Piket;
 use App\Models\Random;
 use App\Models\Slide;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,9 +17,15 @@ class HomeController extends Controller
     public function index()
     {
         $randoms = Random::all();
-        $slides = Slide::all(); // Mengambil semua data slides dari database
-        // dd($random);
-        return view('guest.index', compact('slides', 'randoms')); // Mengirim data slides ke view
+        $slides = Slide::all();
+
+        $currentDay = Carbon::now()->format('l');
+
+        $jadwalPelajaran = Pelajaran::where('day', $currentDay)->get();
+
+        $jadwalPiket = Piket::where('day', $currentDay)->get();
+
+        return view('guest.index', compact('slides', 'randoms', 'jadwalPelajaran', 'jadwalPiket')); // Mengirim data slides ke view
     }
 
     /**

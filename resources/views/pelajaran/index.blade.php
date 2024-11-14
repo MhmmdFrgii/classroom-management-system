@@ -60,10 +60,30 @@
                                                     value="{{ old('subject', $data->subject) }}">
                                             </div>
                                             <div class="mb-3">
-                                                <label for="day">Hari</label>
-                                                <input type="text" id="day" name="day" class="form-control"
-                                                    value="{{ old('day', $data->day) }}">
+                                                <label for="day" class="text-white">Hari</label>
+                                                <select name="day" id="day" class="form-control">
+                                                    <option value="Monday"
+                                                        {{ old('day', $data->day) == 'Monday' ? 'selected' : '' }}>Senin
+                                                    </option>
+                                                    <option value="Tuesday"
+                                                        {{ old('day', $data->day) == 'Tuesday' ? 'selected' : '' }}>Selasa
+                                                    </option>
+                                                    <option value="Wednesday"
+                                                        {{ old('day', $data->day) == 'Wednesday' ? 'selected' : '' }}>Rabu
+                                                    </option>
+                                                    <option value="Thursday"
+                                                        {{ old('day', $data->day) == 'Thursday' ? 'selected' : '' }}>Kamis
+                                                    </option>
+                                                    <option value="Friday"
+                                                        {{ old('day', $data->day) == 'Friday' ? 'selected' : '' }}>Jumat
+                                                    </option>
+                                                    <option value="Saturday"
+                                                        {{ old('day', $data->day) == 'Saturday' ? 'selected' : '' }}>Sabtu
+                                                    </option>
+                                                </select>
                                             </div>
+
+
                                             <div class="mb-3">
                                                 <label for="start_time">Jam Mulai</label>
                                                 <input type="time" id="start_time" name="start_time" class="form-control"
@@ -137,9 +157,15 @@
                                         value="{{ old('subject') }}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="day">Hari</label>
-                                    <input type="text" id="day" name="day" class="form-control"
-                                        value="{{ old('day') }}">
+                                    <label for="day" class="text-white">Hari</label>
+                                    <select name="day" id="day" class="form-control">
+                                        <option value="Monday">Senin</option>
+                                        <option value="Tuesday">Selasa</option>
+                                        <option value="Wednesday">Rabu</option>
+                                        <option value="Thursday">Kamis</option>
+                                        <option value="Friday">Jumat</option>
+                                        <option value="Saturday">Sabtu</option>
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="start_time">Jam Mulai</label>
