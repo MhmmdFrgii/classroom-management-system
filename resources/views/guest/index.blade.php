@@ -145,7 +145,29 @@
                 class="section hidden w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
                 <h2 class="text-2xl font-semibold mb-4">Schedule</h2>
                 <p class="text-gray-300">Content for Schedule</p>
-                <!-- Isi jadwal kelas di sini -->
+                <div class="container text-center py-5">
+                    <h2 class="text-white mb-4">{{ now()->format('l') }}</h2>
+
+                    <!-- Jadwal Pelajaran -->
+                    <div class="schedule-table">
+                        @foreach ($jadwalPelajaran as $pelajaran)
+                            <div class="schedule-item">
+                                <span class="subject">{{ $pelajaran->subject }}</span>
+                                <span class="time">{{ $pelajaran->start_time }} - {{ $pelajaran->end_time }}</span>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <!-- Jadwal Piket -->
+                    <h2 class="text-white mt-5">Piket</h2>
+                    <div class="schedule-table">
+                        @foreach ($jadwalPiket as $piket)
+                            <div class="schedule-item">
+                                <span class="subject">{{ $piket->student_name }}</span>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
     </section>
