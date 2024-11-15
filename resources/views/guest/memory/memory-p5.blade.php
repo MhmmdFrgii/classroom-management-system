@@ -5,8 +5,8 @@
         style="background-image: url('{{ $p5Image ? asset('storage/' . $p5Image->image) : asset('storage/default_image.jpg') }}'); background-size: cover;">
         <div
             class="bg-gradient-to-t from-black from-20% to-black/70 to-80% w-full h-full flex flex-col items-center justify-center">
-            <h5 class="text-3xl font-anton text-primary mb-4 tracking-wide">Galery</h5>
-            <h1 class="text-9xl font-anton mb-4 glow-text tracking-normal uppercase">P5</h1>
+            <h5 class="text-2xl font-anton text-primary mb-4 tracking-wide">Galery</h5>
+            <h1 class="text-7xl font-anton mb-4 glow-text tracking-normal uppercase">P5</h1>
         </div>
     </section>
 

@@ -1,5 +1,5 @@
 <footer id="Footer" class="bg-gray-800 text-white">
-    <div class="mx-auto w-full max-w-screen-xl px-8 py-6 lg:py-8">
+    <div class="mx-auto w-full max-w-screen-xl px-8 py-5 lg:py-8">
         <div class="md:flex md:justify-between">
             <div class="grid grid-cols-3 gap-8">
                 <div>
@@ -9,23 +9,23 @@
                     </a>
                 </div>
                 <div>
-                    <h2 class="mb-4 text-sm font-semibold uppercase">Created By</h2>
-                    <ul class="text-gray-400 font-medium">
+                    <h2 class="mb-4 text-sm font-medium uppercase">Created By</h2>
+                    <ul class="text-gray-400 font-sm">
                         <li class="mb-2">
-                            <a href="https://www.instagram.com/ekizr_/?hl=id" class="hover:underline uppercase">
+                            <a href="https://www.instagram.com/ekizr_/?hl=id" class="hover:underline">
                                 Firgi
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/dafyall/?hl=id" class="hover:underline uppercase">
+                            <a href="https://www.instagram.com/dafyall/?hl=id" class="hover:underline">
                                 Satria
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-4 text-sm font-semibold uppercase">Follow Us</h2>
-                    <ul class="text-gray-400 font-medium">
+                    <h2 class="mb-4 text-sm font-medium uppercase">Follow Us</h2>
+                    <ul class="text-gray-400 font-sm">
                         <li class="mb-2">
                             <a href="https://www.instagram.com/acetkjthree/?hl=id" class="hover:underline">
                                 Instagram
