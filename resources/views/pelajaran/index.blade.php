@@ -55,10 +55,47 @@
                                         @method('PUT')
                                         <div class="modal-body">
                                             <div class="mb-3">
-                                                <label for="subject">Pelajaran</label>
-                                                <input type="text" id="subject" name="subject" class="form-control"
-                                                    value="{{ old('subject', $data->subject) }}">
+                                                <label for="subject" class="text-white">Pelajaran</label>
+                                                <select name="subject" id="subject" class="form-control">
+                                                    <option value="Matematika"
+                                                        {{ old('subject', $data->subject) == 'Matematika' ? 'selected' : '' }}>
+                                                        Matematika</option>
+                                                    <option value="Bahasa Indonesia"
+                                                        {{ old('subject', $data->subject) == 'Bahasa Indonesia' ? 'selected' : '' }}>
+                                                        Bahasa Indonesia</option>
+                                                    <option value="PJOK"
+                                                        {{ old('subject', $data->subject) == 'PJOK' ? 'selected' : '' }}>
+                                                        PJOK</option>
+                                                    <option value="Pendidikan Agama"
+                                                        {{ old('subject', $data->subject) == 'Pendidikan Agama' ? 'selected' : '' }}>
+                                                        Pendidikan Agama</option>
+                                                    <option value="Informatika"
+                                                        {{ old('subject', $data->subject) == 'Informatika' ? 'selected' : '' }}>
+                                                        Informatika</option>
+                                                    <option value="Sejarah Indonesia"
+                                                        {{ old('subject', $data->subject) == 'Sejarah Indonesia' ? 'selected' : '' }}>
+                                                        Sejarah Indonesia</option>
+                                                    <option value="PPKN"
+                                                        {{ old('subject', $data->subject) == 'PPKN' ? 'selected' : '' }}>
+                                                        PPKN</option>
+                                                    <option value="IPAS"
+                                                        {{ old('subject', $data->subject) == 'IPAS' ? 'selected' : '' }}>
+                                                        IPAS</option>
+                                                    <option value="Ngarit"
+                                                        {{ old('subject', $data->subject) == 'Ngarit' ? 'selected' : '' }}>
+                                                        Ngarit</option>
+                                                    <option value="Bahasa Inggris"
+                                                        {{ old('subject', $data->subject) == 'Bahasa Inggris' ? 'selected' : '' }}>
+                                                        Bahasa Inggris</option>
+                                                    <option value="Dasar Keahlian"
+                                                        {{ old('subject', $data->subject) == 'Dasar Keahlian' ? 'selected' : '' }}>
+                                                        Dasar Keahlian</option>
+                                                    <option value="Bahasa Jawa"
+                                                        {{ old('subject', $data->subject) == 'Bahasa Jawa' ? 'selected' : '' }}>
+                                                        Bahasa Jawa</option>
+                                                </select>
                                             </div>
+
                                             <div class="mb-3">
                                                 <label for="day" class="text-white">Hari</label>
                                                 <select name="day" id="day" class="form-control">
@@ -153,8 +190,21 @@
                             <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="subject">Pelajaran</label>
-                                    <input type="text" id="subject" name="subject" class="form-control"
-                                        value="{{ old('subject') }}">
+                                    <select name="subject" id="subject" class="form-control">
+                                        <option value="Matematika">Matematika</option>
+                                        <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                                        <option value="PJOK">PJOK</option>
+                                        <option value="Pendidikan Agama">Pendidikan Agama</option>
+                                        <option value="Informatika">Informatika</option>
+                                        <option value="Sejarah Indonesia">Sejarah Indonesia</option>
+                                        <option value="PPKN">PPKN</option>
+                                        <option value="IPAS">IPAS</option>
+                                        <option value="Ngarit">Ngarit</option>
+                                        <option value="Bahasa Inggris">Bahasa Inggris</option>
+                                        <option value="Dasar Keahlian">Dasar Keahlian</option>
+                                        <option value="Bahasa Jawa">Bahasa Jawa</option>
+
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="day" class="text-white">Hari</label>
