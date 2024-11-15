@@ -5,9 +5,9 @@
         <section id="home"
             class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-black from-10% to-black/70">
             <div>
-                <h5 class="text-3xl font-anton mb-4  tracking-wide">Hi, Bro IS!</h5>
-                <h1 class="text-9xl font-anton mb-4 glow-text tracking-normal uppercase">WELLCOME</h1>
-                <h6 class="text-xl inter-sans mb-4 tracking-wider">TO XII RPL</h6>
+                <h5 class="text-2xl font-anton mb-2  tracking-wide">Hi, Bro IS!</h5>
+                <h1 class="text-7xl font-anton mb-2 glow-text tracking-normal uppercase">WELLCOME</h1>
+                <h6 class="text-md inter-sans mb-4 tracking-wider">TO XII RPL</h6>
             </div>
         </section>
     </section>
@@ -40,13 +40,13 @@
         </div>
     </section>
 
-    <section id="ss" class="pt-36 pb-36 min-h-screen"
+    <section id="ss" class="pt-24 pb-28 min-h-screen"
         style="background-image: url('/lines/mesh..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="container mx-auto text-center">
             <h1 class="text-3xl text-white font-bold mb-6">Structure & Schedule</h1>
 
             <!-- Toggle Buttons -->
-            <div class="flex justify-center space-x-4 mb-8">
+            <div class="flex justify-center space-x-4 mb-1">
                 <button onclick="showSection('structure')"
                     class="toggle-button px-4 py-1 w-28 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
                     Structure
