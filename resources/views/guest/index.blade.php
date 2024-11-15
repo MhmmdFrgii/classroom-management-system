@@ -40,33 +40,36 @@
         </div>
     </section>
 
-    <section id="ss" class="pt-36 min-h-screen">
+    <section id="ss" class="pt-36 pb-36 min-h-screen"
+        style="background-image: url('/lines/mesh..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="container mx-auto text-center">
-            <h1 class="text-3xl font-bold mb-6">Structure & Schedule</h1>
+            <h1 class="text-3xl text-white font-bold mb-6">Structure & Schedule</h1>
 
             <!-- Toggle Buttons -->
             <div class="flex justify-center space-x-4 mb-8">
                 <button onclick="showSection('structure')"
-                    class="toggle-button px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
+                    class="toggle-button px-4 py-1 w-28 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
                     Structure
                 </button>
                 <button onclick="showSection('schedule')"
-                    class="toggle-button px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
+                    class="toggle-button px-4 py-1 w-28 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
                     Schedule
                 </button>
             </div>
 
             <!-- Sections -->
-            <div id="structure" class="section w-full max-w-2xl mx-auto p-8 bg-gray-900 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-center mb-4 text-white">Structure</h2>
+            <div id="structure" class="section w-full max-w-3xl mx-auto p-8 bg-transparent rounded-lg min-h-screen">
+                {{-- <h2 class="text-2xl font-semibold text-center mb-4 text-white">Structure</h2> --}}
 
                 <!-- Wali Kelas -->
                 <p class="text-gray-300 text-center mb-1">Wali Kelas</p>
-                <div class="flex flex-col items-center space-y-4">
-                    <div class="bg-gray-300 text-black px-4 py-2 rounded-full">Siti Shofiyah S.Pd.I</div>
+                <div class="flex flex-col items-center space-y-4 relative">
+                    <div class="bg-gray-300 text-black px-4 py-1 w-56 rounded-full" data-aos="fade-up">Siti Shofiyah
+                        S.Pd.I</div>
 
                     <!-- Garis Vertikal -->
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center w-full pt-4 absolute" data-aos="fade-up"
+                        data-aos-delay="400">
                         <svg width="30" height="50">
                             <line x1="15" y1="0" x2="15" y2="50" stroke="white"
                                 stroke-width="1" />
@@ -74,72 +77,116 @@
 
                         <!-- Garis Horizontal -->
                         <div class="flex items-start">
-                            <svg width="500" height="30">
-                                <line x1="0" y1="0" x2="500" y2="0" stroke="white"
+                            <svg width="566" height="30">
+                                <line x1="0" y1="0" x2="700" y2="0" stroke="white"
                                     stroke-width="2" />
                             </svg>
                         </div>
+                    </div>
 
-                        <!-- Garis Kiri dan Kanan dengan Bulatan -->
-                        <div class="flex justify-between w-full -translate-y-7">
-                            <svg width="30" height="25">
-                                <line x1="0" y1="0" x2="0" y2="25" stroke="white"
-                                    stroke-width="2" />
-                            </svg>
-                            <svg width="30" height="25">
-                                <line x1="30" y1="0" x2="30" y2="25" stroke="white"
-                                    stroke-width="2" />
-                            </svg>
-                        </div>
+                    <!-- Garis Kiri dan Kanan dengan Bulatan -->
+                    <div class="flex justify-between w-full -bottom-[75px] absolute" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <svg width="30" height="25" class="translate-x-[68px]">
+                            <line x1="0" y1="0" x2="0" y2="25" stroke="white"
+                                stroke-width="2" />
+                        </svg>
+                        <svg width="30" height="25" class="-translate-x-[68px]">
+                            <line x1="30" y1="0" x2="30" y2="25" stroke="white"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
 
-                        {{-- circle --}}
-                        <div class="flex justify-between w-full -translate-y-10">
-                            <svg width="20" height="30">
-                                <circle cx="0" cy="15" r="4" fill="white" />
-                            </svg>
-                            <svg width="20" height="30">
-                                <circle cx="15" cy="15" r="4" fill="white" />
-                            </svg>
-                        </div>
+                    {{-- circle --}}
+                    <div class="flex justify-between w-full -bottom-[90px] absolute" data-aos="fade-up"
+                        data-aos-delay="600">
+                        <svg width="20" height="30" class="translate-x-[54px]">
+                            <circle cx="15" cy="15" r="4" fill="white" />
+                        </svg>
+                        <svg width="20" height="30" class="-translate-x-[64px]">
+                            <circle cx="15" cy="15" r="4" fill="white" />
+                        </svg>
                     </div>
 
                     <!-- Ketua dan Wakil Ketua -->
-                    <div class="flex justify-between w-full px-10 mt-6">
+                    <div class="flex justify-between items-center w-full -bottom-[150px] absolute" data-aos="fade-up"
+                        data-aos-delay="700">
                         <div class="text-center">
                             <p class="text-gray-300">Ketua Kelas</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Hafizh</div>
+                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Azka</div>
+                        </div>
+                        <!-- Garis Horizontal -->
+                        <div class="flex items-center translate-y-7">
+                            <svg width="450" height="30">
+                                <line x1="0" y1="0" x2="700" y2="0" stroke="white"
+                                    stroke-width="2" />
+                            </svg>
                         </div>
                         <div class="text-center">
                             <p class="text-gray-300">Wakil Ketua</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Fikri</div>
+                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Alfan</div>
                         </div>
                     </div>
 
-                    <!-- Garis Vertikal Bawah -->
-                    <svg width="30" height="50">
-                        <line x1="15" y1="0" x2="15" y2="50" stroke="white"
-                            stroke-width="1" />
-                    </svg>
+                    <!-- Garis Vertikal -->
+                    <div class="flex flex-col items-center w-full pt-4 -bottom-[245px] absolute" data-aos="fade-up"
+                        data-aos-delay="800">
+                        <svg width="30" height="80">
+                            <line x1="15" y1="80" x2="15" y2="0" stroke="white"
+                                stroke-width="1" />
+                        </svg>
+
+                        <!-- Garis Horizontal -->
+                        <div class="flex items-start">
+                            <svg width="300" height="30">
+                                <line x1="0" y1="0" x2="700" y2="0" stroke="white"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Garis Kiri dan Kanan dengan Bulatan -->
+                    <div class="flex justify-between w-full -bottom-[240px] absolute" data-aos="fade-up"
+                        data-aos-delay="900">
+                        <svg width="30" height="25" class="translate-x-[202px]">
+                            <line x1="0" y1="0" x2="0" y2="25" stroke="white"
+                                stroke-width="2" />
+                        </svg>
+                        <svg width="30" height="25" class="-translate-x-[202px]">
+                            <line x1="30" y1="0" x2="30" y2="25" stroke="white"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+
+                    {{-- circle --}}
+                    <div class="flex justify-between w-full -bottom-[258px] absolute" data-aos="fade-up"
+                        data-aos-delay="1000">
+                        <svg width="20" height="30" class="translate-x-[188px]">
+                            <circle cx="15" cy="15" r="4" fill="white" />
+                        </svg>
+                        <svg width="20" height="30" class="-translate-x-[198px]">
+                            <circle cx="15" cy="15" r="4" fill="white" />
+                        </svg>
+                    </div>
+
+
 
                     <!-- Sekretaris dan Bendahara -->
-                    <div class="flex justify-between w-full px-10 mt-6">
-                        <div class="text-center">
+                    <div class="flex justify-between w-full -bottom-[360px] absolute" data-aos="fade-up"
+                        data-aos-delay="1100">
+                        <div class="text-center translate-x-[140px]">
                             <p class="text-gray-300">Sekretaris</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Fabian</div>
-                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Izra</div>
+                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Fabian</div>
+                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full mt-2">Widi</div>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center -translate-x-[140px]">
                             <p class="text-gray-300">Bendahara</p>
-                            <div class="bg-white text-black px-4 py-2 rounded-full">Romo</div>
-                            <div class="bg-white text-black px-4 py-2 rounded-full mt-2">Indra</div>
+                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Rama</div>
+                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full mt-2">Indra crypto</div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
 
             <div id="schedule"
                 class="section hidden w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
