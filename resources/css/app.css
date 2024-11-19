@@ -90,8 +90,8 @@
 }
 
 #ss {
-    background-image: url('/lines/background.svg');
-    background-size: cover;       /* Sesuaikan agar gambar memenuhi area */
+    background-image: url("/lines/background.svg");
+    background-size: cover; /* Sesuaikan agar gambar memenuhi area */
     background-repeat: no-repeat; /* Menghindari pengulangan */
-    background-position: center;  /* Menempatkan gambar di tengah */
+    background-position: center; /* Menempatkan gambar di tengah */
 }
