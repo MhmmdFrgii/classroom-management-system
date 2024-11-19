@@ -3,7 +3,7 @@
     <section class="hero-section">
         {{-- Hero Section with Slideshow --}}
         <section id="home"
-            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-black from-10% to-black/70">
+            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-[#1e1e1e] from-10% via-[#1e1e1e]/90 via-40%  to-lime-700/90">
             <div>
                 <h5 class="text-2xl font-anton mb-2  tracking-wide">Hi, Bro IS!</h5>
                 <h1 class="text-7xl font-anton mb-2 glow-text tracking-normal uppercase">WELLCOME</h1>
