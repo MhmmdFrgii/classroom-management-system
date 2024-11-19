@@ -12,9 +12,15 @@ class PlimaRepository implements PlimaInterface
         return P5::findOrFail($id);
     }
 
-    public function getAll()
+    public function getAll(int $perPage)
     {
-        return P5::all();
+        $query = P5::query();
+
+        if ($perPage) {
+            return $query->paginate($perPage);
+        }
+
+        return $query->get();
     }
 
     public function create(array $data)

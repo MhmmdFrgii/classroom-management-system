@@ -176,6 +176,10 @@
                 </tbody>
             </table>
 
+            <div class="mt-3 d-flex justify-content-center">
+                {{ $pelajaran->links('pagination::bootstrap-4') }}
+            </div>
+
             {{-- MODAL CREATE --}}
             <div id="createModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createModalLabel"
                 aria-hidden="true">

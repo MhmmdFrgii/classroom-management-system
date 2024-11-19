@@ -18,7 +18,7 @@ class PiketController extends Controller
 
     public function index()
     {
-        $piket = $this->piketService->getAll();
+        $piket = $this->piketService->getAll(10);
         return view('piket.index', compact('piket'));
     }
 

@@ -12,9 +12,15 @@ class SlidesRepository implements SlidesInterface
         return Slide::findOrFail($id);
     }
 
-    public function getAll()
+    public function getAll(int $perPage)
     {
-        return Slide::all();
+        $query = Slide::query();
+
+        if ($perPage) {
+            return $query->paginate($perPage);
+        }
+
+        return $query->get();
     }
 
     public function create(array $data)

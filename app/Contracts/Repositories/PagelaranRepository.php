@@ -12,9 +12,15 @@ class PagelaranRepository implements PagelaranInterface
         return Pagelaran::findOrFail($id);
     }
 
-    public function getAll()
+    public function getAll(int $perPage)
     {
-        return Pagelaran::all();
+        $query = Pagelaran::query();
+
+        if ($perPage) {
+            return $query->paginate($perPage);
+        }
+
+        return $query->get();
     }
 
     public function create(array $data)

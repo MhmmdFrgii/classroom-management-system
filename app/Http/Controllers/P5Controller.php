@@ -19,7 +19,7 @@ class P5Controller extends Controller
 
     public function index()
     {
-        $plima = $this->plimaService->getAllPlima();
+        $plima = $this->plimaService->getAllPlima(10);
         return view('plima.index', compact('plima'));
     }
 

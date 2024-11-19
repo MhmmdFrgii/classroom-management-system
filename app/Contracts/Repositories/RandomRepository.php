@@ -12,9 +12,13 @@ class RandomRepository implements RandomInterface
         return Random::findOrFail($id);
     }
 
-    public function getAll()
+    public function getAll(int $perPage)
     {
-        return Random::all();
+        $query = Random::query();
+        if ($perPage) {
+            return $query->paginate($perPage);
+        }
+        return $query->get();
     }
 
     public function create(array $data)

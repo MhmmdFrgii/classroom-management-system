@@ -9,9 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class UserService implements UserInterface
 {
-    public function getAll()
+    public function getAll(int $perPage = null)
     {
-        return User::all();
+        $query = User::query();
+        if ($perPage) {
+            return $query->paginate($perPage);
+        }
+        return $query->get();
     }
 
     public function create(array $data)

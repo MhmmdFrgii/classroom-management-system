@@ -18,7 +18,7 @@ class PelajaranController extends Controller
 
     public function index()
     {
-        $pelajaran = $this->pelajaranService->getAll();
+        $pelajaran = $this->pelajaranService->getAll(10);
         return view('pelajaran.index', compact('pelajaran'));
     }
 

@@ -121,6 +121,11 @@
                 </tbody>
             </table>
 
+            {{-- Pagination Links --}}
+            <div class="mt-3 d-flex justify-content-center">
+                {{ $classmeet->links('pagination::bootstrap-4') }}
+            </div>
+
 
 
 

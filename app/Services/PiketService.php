@@ -7,9 +7,13 @@ use App\Models\Piket;
 
 class PiketService implements PiketInterface
 {
-    public function getAll()
+    public function getAll(int $perPage = null)
     {
-        return Piket::all();
+        $query = Piket::query();
+        if ($perPage) {
+            return $query->paginate($perPage);
+        }
+        return $query->get();
     }
 
     public function create(array $data)

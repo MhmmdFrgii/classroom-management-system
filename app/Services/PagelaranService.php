@@ -34,10 +34,10 @@ class PagelaranService
         return $this->uploadImage($file, $folder);
     }
 
-    public function getAllPagelaran()
+    public function getAllPagelaran(int $perPage = null)
     {
         try {
-            return $this->pagelaranRepository->getAll();
+            return $this->pagelaranRepository->getAll($perPage);
         } catch (\Exception $e) {
             Log::error('Error fetching slides: ' . $e->getMessage());
             return null;

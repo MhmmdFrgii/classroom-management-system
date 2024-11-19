@@ -25,7 +25,7 @@ class RandomController extends Controller
 
     public function index()
     {
-        $random = $this->randomService->getAllRandom();
+        $random = $this->randomService->getAllRandom(10);
         return view('random.index', compact('random'));
     }
 

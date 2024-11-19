@@ -8,6 +8,7 @@ use App\Traits\UploadTrait;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use PhpParser\Node\Expr\FuncCall;
 
 class ClassmeetService
 {
@@ -89,5 +90,10 @@ class ClassmeetService
             Log::error('Error deleting slide: ' . $e->getMessage());
             return null;
         }
+    }
+
+    public function paginateClassmeet(int $perPage)
+    {
+        return $this->classmeetRepository->paginate($perPage);
     }
 }
