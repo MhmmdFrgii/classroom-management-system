@@ -12,8 +12,6 @@
         </section>
     </section>
 
-<<<<<<< Updated upstream
-=======
     {{-- Section Memory --}}
     <section id="memory"
         class="pt-36 w-full min-h-screen shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
@@ -84,7 +82,6 @@
         </div>
     </section>
 
->>>>>>> Stashed changes
     {{-- Section Random pick --}}
     <section id="random" class="pt-14 pb-14 bg-black text-white w-full">
         <div class="relative p-10 mx-auto">

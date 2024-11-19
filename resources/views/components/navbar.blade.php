@@ -3,15 +3,11 @@
     class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-500/50 backdrop-blur-md w-[400px] items-center z-20 rounded-2xl">
     <div class="container flex justify-center text-center items-center px-4 py-1">
         <nav class="flex space-x-8">
-<<<<<<< Updated upstream
             <a href="{{ route('home') }}" id="home-link" class="nav-link text-sm font-semibold text-white py-2">Beranda</a>
-            <a href="{{ route('memory') }}" id="memory-link"
-=======
-            <a href="#" id="home-link" class="nav-link text-sm font-semibold text-white py-2">Beranda</a>
             <a href="{{ route('home') }}#memory" id="home-link"
->>>>>>> Stashed changes
                 class="nav-link text-sm font-semibold text-white py-2">Memory</a>
-            <a href="#ss" id="ss-link" class="nav-link text-sm font-semibold text-white py-2">Struktur &
+            <a href="{{ route('home') }}#ss" id="home-link"
+                class="nav-link text-sm font-semibold text-white py-2">Struktur &
                 Jadwal</a>
         </nav>
     </div>
@@ -65,22 +61,28 @@
 </style>
 
 <script>
-    // JavaScript untuk mengatur link aktif berdasarkan URL path
     function setActiveLink() {
-        // Dapatkan path dari URL
+        // Dapatkan path dan hash dari URL
         const path = window.location.pathname;
+        const hash = window.location.hash;
 
         // Menghapus kelas 'active-link' dari semua link
         document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active-link'));
 
         // Menambahkan kelas 'active-link' ke link yang sesuai berdasarkan path
-        if (path.includes('/memory')) { // Jika URL mengandung /memory
+        if (path.includes('/memoryclassmeet') || path.includes('/memorypagelaran') || path.includes('/memoryp5')) {
             document.getElementById('memory-link').classList.add('active-link');
-        } else if (path.includes('#ss')) { // Jika URL mengandung #ss
-            document.getElementById('ss-link').classList.add('active-link');
-        } else {
-            document.getElementById('home-link').classList.add('active-link');
         }
+
+    } else if (path.includes('/home')) {
+        // Jika URL mengandung /home (halaman home)
+        document.getElementById('home-link').classList.add('active-link');
+    } else if (hash === '#ss') { // Jika hash mengandung #ss di halaman home
+        document.getElementById('ss-link').classList.add('active-link');
+    } else {
+        // Default fallback ke link home
+        document.getElementById('home-link').classList.add('active-link');
+    }
     }
 
     // Jalankan saat halaman pertama kali dimuat
@@ -88,4 +90,5 @@
 
     // Jalankan ulang saat hash atau path berubah
     window.addEventListener('popstate', setActiveLink);
+    window.addEventListener('hashchange', setActiveLink); // Deteksi perubahan hash
 </script>
