@@ -12,11 +12,84 @@
         </section>
     </section>
 
+<<<<<<< Updated upstream
+=======
+    {{-- Section Memory --}}
+    <section id="memory"
+        class="pt-36 w-full min-h-screen shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-5">
+                    <h2 class="inter-bold text-white text-2xl mb-4 sm:text-4xl lg:text-5xl">Memory
+                    </h2>
+                </div>
+            </div>
+            <!-- Memory cards (example) -->
+            <div class="w-full px-4 flex flex-wrap mx-auto">
+                <a href="{{ route('memorypagelaran') }}" class="mb-12 p-3 w-1/3 group">
+                    <div
+                        class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-primary hover:shadow-md transition duration-300">
+                        <div class="rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
+                            <!-- Gambar untuk memory card -->
+                            @if ($pagelaransImage)
+                                <img src="{{ asset('storage/' . $pagelaransImage->image) }}" alt="Image"
+                                    class="w-full h-[200px]" />
+                            @else
+                                <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
+                                    class="w-full h-[200px]" />
+                            @endif
+                        </div>
+                        <h3
+                            class="text-sm font-semibold uppercase text-dark pt-10 mb-3 text-center group-hover:text-primary transition duration-300">
+                            Pagelaran Picture</h3>
+                    </div>
+                </a>
+                <a href="{{ route('memoryclassmeet') }}" class="mb-12 p-3 w-1/3 group">
+                    <div
+                        class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-primary hover:shadow-md transition duration-500">
+                        <div class="rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
+                            @if ($classmeetImage)
+                                <img src="{{ asset('storage/' . $classmeetImage->image) }}" alt="Image"
+                                    class="w-full h-[200px]" />
+                            @else
+                                <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
+                                    class="w-full h-[200px]" />
+                            @endif
+                        </div>
+                        <h3
+                            class="text-sm font-semibold uppercase text-dark pt-10 mb-3 text-center group-hover:text-primary transition duration-300">
+                            Classmeet Picture
+                        </h3>
+                    </div>
+                </a>
+                <a href="{{ route('memoryp5') }}" class="mb-12 p-3 w-1/3 group">
+                    <div
+                        class="w-full p-3 bg-white rounded-xl shadow-md hover:shadow-primary hover:shadow-md transition duration-500">
+                        <div class="rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
+                            @if ($p5Image)
+                                <img src="{{ asset('storage/' . $p5Image->image) }}" alt="Image"
+                                    class="w-full h-[200px]" />
+                            @else
+                                <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
+                                    class="w-full h-[200px]" />
+                            @endif
+                        </div>
+                        <h3
+                            class="text-sm font-semibold uppercase text-dark pt-10 mb-3 text-center group-hover:text-primary transition duration-300">
+                            P5 Picture</h3>
+                    </div>
+                </a>
+                <!-- Add more cards here as needed -->
+            </div>
+        </div>
+    </section>
+
+>>>>>>> Stashed changes
     {{-- Section Random pick --}}
     <section id="random" class="pt-14 pb-14 bg-black text-white w-full">
         <div class="relative p-10 mx-auto">
             <div class="w-full px-4 text-center pb-10">
-                <h2 class="inter-bold text-3xl text-white mb-4">Random Pick</h2>
+                <h2 class="inter-bold text-2xl text-white mb-4">Random Pick</h2>
             </div>
 
             <!-- Swiper Container -->
@@ -43,16 +116,17 @@
     <section id="ss" class="pt-24 pb-28 min-h-screen"
         style="background-image: url('/lines/mesh..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="container mx-auto text-center">
-            <h1 class="text-3xl text-white font-bold mb-6">Structure & Schedule</h1>
+            {{-- <h1 class="text-3xl text-white font-bold mb-6">Structure & Schedule</h1> --}}
 
             <!-- Toggle Buttons -->
-            <div class="flex justify-center space-x-4 mb-1">
+            <div class="flex justify-center space-x-1 mb-1">
                 <button onclick="showSection('structure')"
-                    class="toggle-button px-4 py-1 w-28 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
+                    class="toggle-button py-1 w-28 text-white text-2xl font-semibold rounded">
                     Structure
                 </button>
+                <span class="text-4xl text-white font-bold">&</span>
                 <button onclick="showSection('schedule')"
-                    class="toggle-button px-4 py-1 w-28 bg-gray-700 text-white rounded hover:bg-gray-600 transition active:bg-gray-500">
+                    class="toggle-button py-1 w-28 text-white text-2xl font-semibold rounded">
                     Schedule
                 </button>
             </div>
@@ -188,34 +262,75 @@
                 </div>
             </div>
 
-            <div id="schedule"
-                class="section hidden w-full max-w-2xl mx-auto p-8 bg-transparent rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold mb-4">Schedule</h2>
-                <p class="text-gray-300">Content for Schedule</p>
-                <div class="container text-center py-5">
-                    <h2 class="text-white mb-4">{{ now()->format('l') }}</h2>
+            {{-- Schedule --}}
+            <div id="schedule" class="section w-full hidden max-w-4xl mx-auto p-8 bg-transparent rounded-lg flex">
+                <div class="w-1/2">
+                    <div class="container text-center py-5">
+                        <h2 class="text-white text-3xl font-bold mb-2" data-aos="fade-up">
+                            {{ now()->format('l') }}
+                        </h2>
 
-                    <!-- Jadwal Pelajaran -->
-                    <div class="schedule-table">
-                        @foreach ($jadwalPelajaran as $pelajaran)
-                            <div class="schedule-item">
-                                <span class="subject">{{ $pelajaran->subject }}</span>
-                                <span class="time">{{ $pelajaran->start_time }} - {{ $pelajaran->end_time }}</span>
+                        <!-- Jadwal Pelajaran -->
+                        <div class="schedule-table text-center">
+                            @foreach ($jadwalPelajaran as $pelajaran)
+                                <div class="schedule-item">
+                                    <div class="divider" data-aos="fade-up">
+                                        <svg width="300" height="2" class="mx-auto">
+                                            <line x1="0" y1="0" x2="300" y2="0"
+                                                stroke="white" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="subject-time mt-3" data-aos="fade-up">
+                                        <span class="subject text-white text-lg font-semibold block">
+                                            {{ $pelajaran->subject }}
+                                        </span>
+                                        <span class="time text-gray-300 text-sm block">
+                                            {{ $pelajaran->start_time }} - {{ $pelajaran->end_time }}
+                                        </span>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <div class="divider" data-aos="fade-up">
+                                <svg width="300" height="2" class="mx-auto">
+                                    <line x1="0" y1="0" x2="300" y2="0"
+                                        stroke="white" stroke-width="2" />
+                                </svg>
                             </div>
-                        @endforeach
+                        </div>
                     </div>
+                </div>
 
-                    <!-- Jadwal Piket -->
-                    <h2 class="text-white mt-5">Piket</h2>
-                    <div class="schedule-table">
-                        @foreach ($jadwalPiket as $piket)
-                            <div class="schedule-item">
-                                <span class="subject">{{ $piket->student_name }}</span>
+                <!-- Jadwal Piket -->
+                <div class="w-1/2">
+                    <div class="container text-center py-5">
+                        <h2 class="text-white text-3xl font-bold mb-2" data-aos="fade-up">Piket</h2>
+                        <div class="schedule-table">
+                            @foreach ($jadwalPiket as $piket)
+                                <div class="schedule-item">
+                                    <div class="divider" data-aos="fade-up">
+                                        <svg width="300" height="2" class="mx-auto">
+                                            <line x1="0" y1="0" x2="300" y2="0"
+                                                stroke="white" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="subject-time mt-5 mb-4" data-aos="fade-up">
+                                        <span class="subject text-gray-300 text-sm font-semibold block">
+                                            {{ $piket->student_name }}
+                                        </span>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <div class="divider" data-aos="fade-up">
+                                <svg width="300" height="2" class="mx-auto">
+                                    <line x1="0" y1="0" x2="300" y2="0"
+                                        stroke="white" stroke-width="2" />
+                                </svg>
                             </div>
-                        @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -273,14 +388,16 @@
             });
 
             // Show selected section
-            document.getElementById(sectionId).classList.remove('hidden');
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.remove('hidden');
 
-            // Update button styles
-            document.querySelectorAll('.toggle-button').forEach(button => {
-                button.classList.remove('bg-gray-600', 'active:bg-gray-500');
-                button.classList.add('bg-gray-700');
-            });
-            event.target.classList.add('bg-gray-600');
+            // Refresh AOS animations to reinitialize visible elements
+            setTimeout(() => {
+                if (window.AOS) {
+                    AOS.refresh();
+                }
+            }, 100); // Delay to ensure visibility changes are applied
         }
     </script>
+
 </x-guest>
