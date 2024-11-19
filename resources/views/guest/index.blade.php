@@ -13,7 +13,8 @@
     </section>
 
     {{-- Section Random pick --}}
-    <section id="random" class="pt-14 pb-14 bg-black text-white w-full">
+    <section id="random" class="pt-14 pb-14 text-white w-full"
+        style="background-image: url('/lines/mesh2..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="relative p-10 mx-auto">
             <div class="w-full px-4 text-center pb-10">
                 <h2 class="inter-bold text-3xl text-white mb-4">Random Pick</h2>
