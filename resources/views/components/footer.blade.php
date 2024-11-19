@@ -1,4 +1,5 @@
-<footer id="Footer" class="bg-gray-800 text-white">
+<footer id="Footer" class="text-white"
+    style="background-image: url('/lines/mesh4..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
     <div class="mx-auto w-full max-w-screen-xl px-8 py-5 lg:py-8">
         <div class="md:flex md:justify-between">
             <div class="grid grid-cols-3 gap-8">
