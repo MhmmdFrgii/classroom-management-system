@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Classmeet;
+use App\Models\P5;
+use App\Models\Pagelaran;
 use App\Models\Pelajaran;
 use App\Models\Piket;
 use App\Models\Random;
@@ -16,6 +19,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $pagelaransImage = Pagelaran::first();
+        $classmeetImage = Classmeet::first();
+        $p5Image = P5::first();
+
         $randoms = Random::all();
         $slides = Slide::all();
 
@@ -25,7 +32,7 @@ class HomeController extends Controller
 
         $jadwalPiket = Piket::where('day', $currentDay)->get();
 
-        return view('guest.index', compact('slides', 'randoms', 'jadwalPelajaran', 'jadwalPiket')); // Mengirim data slides ke view
+        return view('guest.index', compact('slides', 'randoms', 'jadwalPelajaran', 'jadwalPiket', 'pagelaransImage', 'classmeetImage', 'p5Image')); // Mengirim data slides ke view
     }
 
     /**
