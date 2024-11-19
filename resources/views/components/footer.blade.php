@@ -1,10 +1,18 @@
-<footer id="Footer" class="text-white bg-[#1e1e1e]">
+<style>
+    #Footer {
+        background: linear-gradient(to top,
+                rgb(77, 153, 0) 5%,
+                rgb(52, 69, 34) 55%,
+                #1e1e1e);
+    }
+</style>
+<footer id="Footer" class="text-white">
     <div class="mx-auto w-full max-w-screen-3xl px-8 py-5 lg:py-8">
         <div class="md:flex md:justify-between">
             <div class="grid grid-cols-3 gap-8">
                 <div>
                     <a href="#">
-                        <img src="{{ asset('storage/logo/logo.png') }}" alt="Logo"
+                        <img src="{{ asset('storage/logo/logo.png') }}" a lt="Logo"
                             class="object-contain h-[60px] w-[60px]" />
                     </a>
                 </div>
