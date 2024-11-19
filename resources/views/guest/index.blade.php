@@ -13,8 +13,8 @@
     </section>
 
     {{-- Section Memory --}}
-    <section id="memory"
-        class="pt-36 w-full min-h-screen shadow-md bg-gradient-to-b from-black from-20% to-gray-600 to-80%">
+    <section id="memory" class="pt-36 w-full min-h-screen shadow-md "
+        style="background-image: url('/lines/mesh3..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-5">
