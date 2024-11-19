@@ -33,10 +33,10 @@ class RandomService
         return $this->uploadImage($file, $folder);
     }
 
-    public function getAllRandom()
+    public function getAllRandom(int $perPage = null)
     {
         try {
-            return $this->randomRepository->getAll();
+            return $this->randomRepository->getAll($perPage);
         } catch (\Exception $e) {
             Log::error('Error fetching slides: ' . $e->getMessage());
             return null;

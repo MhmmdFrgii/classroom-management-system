@@ -3,6 +3,7 @@
 namespace App\Contracts\Repositories;
 
 use App\Contracts\Interfaces\Eloquents\ClassmeetInterface;
+use App\Contracts\Interfaces\Eloquents\PaginationInterface;
 use App\Models\Classmeet;
 
 class ClassmeetRepository implements ClassmeetInterface
@@ -33,5 +34,11 @@ class ClassmeetRepository implements ClassmeetInterface
     {
         $classmeet = Classmeet::findOrFail($id);
         $classmeet->delete();
+    }
+    public function paginate(int $perPage)
+    {
+        $query = Classmeet::query();
+
+        return $query->paginate($perPage);
     }
 }

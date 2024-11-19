@@ -19,7 +19,7 @@ class PagelaranController extends Controller
 
     public function index()
     {
-        $pagelaran = $this->pageralanService->getAllPagelaran();
+        $pagelaran = $this->pageralanService->getAllPagelaran(10);
         return view('pagelaran.index', compact('pagelaran'));
     }
 

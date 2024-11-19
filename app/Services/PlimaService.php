@@ -33,10 +33,10 @@ class PlimaService
         return $this->uploadImage($file, $folder);
     }
 
-    public function getAllPlima()
+    public function getAllPlima(int $perPage = null)
     {
         try {
-            return $this->plimaRepository->getAll();
+            return $this->plimaRepository->getAll($perPage);
         } catch (\Exception $e) {
             Log::error('Error fetching slides: ' . $e->getMessage());
             return null;

@@ -18,9 +18,10 @@ class ClassmeetController extends Controller
     }
 
 
-    public function index()
+    public function index(Request $request)
     {
-        $classmeet = $this->classmeetService->getAllClassmeet();
+        $perPage = $request->get('per_page', 10);
+        $classmeet = $this->classmeetService->paginateClassmeet($perPage);
         return view('classmeet.index', compact('classmeet'));
     }
 

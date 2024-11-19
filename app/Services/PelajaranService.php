@@ -7,9 +7,14 @@ use App\Models\Pelajaran;
 
 class PelajaranService implements PelajaranInterface
 {
-    public function getAll()
+    public function getAll(int $perPage = null)
     {
-        return Pelajaran::all();
+        $query = Pelajaran::query();
+        if ($perPage) {
+            return $query->paginate($perPage);
+        }
+
+        return $query->get();
     }
 
     public function create(array $data)

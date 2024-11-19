@@ -33,10 +33,10 @@ class SlideService
         return $this->uploadImage($file, $folder);
     }
 
-    public function getAllSlide()
+    public function getAllSlide(int $perPage = null)
     {
         try {
-            return $this->slideRepository->getAll();
+            return $this->slideRepository->getAll($perPage);
         } catch (\Exception $e) {
             Log::error('Error fetching slides: ' . $e->getMessage());
             return null;

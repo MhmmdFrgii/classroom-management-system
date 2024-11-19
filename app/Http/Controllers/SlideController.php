@@ -26,7 +26,7 @@ class SlideController extends Controller
 
     public function index()
     {
-        $slide = $this->slideService->getAllSlide();
+        $slide = $this->slideService->getAllSlide(10);
         return view('slides.index', compact('slide'));
     }
 

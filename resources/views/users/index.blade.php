@@ -128,6 +128,10 @@
                     @endforeach
                 </tbody>
             </table>
+
+            <div class="mt-3 d-flex justify-content-center">
+                {{ $users->links('pagination::bootstrap-4') }}
+            </div>
         </div>
 
 

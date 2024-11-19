@@ -127,6 +127,10 @@
                 </tbody>
             </table>
 
+            <div class="mt-3 d-flex justify-content-center">
+                {{ $piket->links('pagination::bootstrap-4') }}
+            </div>
+
 
 
 
