@@ -1,8 +1,8 @@
 <style>
     #Footer {
         background: linear-gradient(to top,
-                rgb(77, 153, 0) 5%,
-                rgb(52, 69, 34) 55%,
+                rgb(75, 116, 34) 5%,
+                rgb(53, 73, 31) 55%,
                 #1e1e1e);
     }
 </style>
@@ -17,30 +17,31 @@
                     </a>
                 </div>
                 <div>
-                    <h2 class="mb-4 text-sm font-medium uppercase">Created By</h2>
+                    <h2 class="mb-4 text-sm font-bold uppercase">Created By</h2>
                     <ul class="text-gray-400 font-sm">
                         <li class="mb-2">
-                            <a href="https://www.instagram.com/ekizr_/?hl=id" class="hover:underline">
-                                Firgi
+                            <a href="https://www.instagram.com/ekizr_/?hl=id" target="_blank" class="hover:underline">
+                                <span class="uppercase font-medium">Firgi</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/dafyall/?hl=id" class="hover:underline">
-                                Satria
+                            <a href="https://www.instagram.com/dafyall/?hl=id" target="_blank" class="hover:underline">
+                                <span class="uppercase font-medium">satria</span>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-4 text-sm font-medium uppercase">Follow Us</h2>
+                    <h2 class="mb-4 text-sm font-bold uppercase">Follow Us</h2>
                     <ul class="text-gray-400 font-sm">
                         <li class="mb-2">
-                            <a href="https://www.instagram.com/acetkjthree/?hl=id" class="hover:underline">
+                            <a href="https://www.instagram.com/acetkjthree/?hl=id" class="hover:underline"
+                                target="_blank">
                                 Instagram
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/@11TKJ3" class="hover:underline">
+                            <a href="https://www.youtube.com/@11TKJ3" class="hover:underline" target="_blank">
                                 Youtube
                             </a>
                         </li>

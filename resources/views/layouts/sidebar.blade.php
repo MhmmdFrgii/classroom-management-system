@@ -44,26 +44,27 @@
                  </li>
 
                  <li>
+                     <a href="javascript: void(0);">
+                         <i class="fas fa-coffee"></i>
+                         <span> Jadwal </span>
+                         <span class="menu-arrow"></span>
+                     </a>
+                     <ul class="nav-second-level" aria-expanded="false">
+                         <li>
+                             <a href="{{ route('jadwal-pelajaran.index') }}">Jadwal Pelajaran</a>
+                         </li>
+                         <li>
+                             <a href="{{ route('jadwal-piket.index') }}">Jadwal Piket</a>
+                         </li>
+                     </ul>
+                 </li>
+
+                 <li>
                      <a href="{{ route('random.index') }}">
                          <i class="la la-clone"></i>
                          <span> Random Pict </span>
                      </a>
                  </li>
-
-                 <li>
-                     <a href="{{ route('jadwal-pelajaran.index') }}">
-                         <i class=" fas fa-coffee "></i>
-                         <span> Jadwal Pelajaran </span>
-                     </a>
-                 </li>
-
-                 <li>
-                     <a href="{{ route('jadwal-piket.index') }}">
-                         <i class=" la la-code-fork "></i>
-                         <span> Jadwal Piket </span>
-                     </a>
-                 </li>
-
 
                  @role('super admin')
                      <li>

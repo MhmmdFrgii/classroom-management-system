@@ -195,7 +195,7 @@
                  <span></span>
              </button>
          </li>
-
+         {{-- 
          <li class="dropdown d-none d-lg-block">
              <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"
                  role="button" aria-haspopup="false" aria-expanded="false">
@@ -209,7 +209,7 @@
                  </a>
 
              </div>
-         </li>
+         </li> --}}
 
          {{-- <li class="dropdown dropdown-mega d-none d-lg-block">
              <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"

@@ -1,80 +1,66 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-secondary"
-        style="background-image: url('{{ asset('assets/images/bg-pattern-2.png') }}'); background-size: cover;">
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-lg border-0 rounded-3">
-                <div class="card-body p-5">
-                    <h3 class="text-center mb-4 font-weight-bold">Welcome Back</h3>
-                    <p class="text-center text-muted mb-4">Please log in to continue</p>
+    <div class="account-pages mt-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card">
 
-                    <!-- Session Status -->
-                    @if (session('status'))
-                        <div class="alert alert-success text-center">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                        <div class="card-body p-4">
 
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                            <div class="text-center w-75 m-auto">
+                                <h3 class="text-center mb-4 font-weight-bold">Welcome Back</h3>
+                            </div>
 
-                        <!-- Email Address -->
-                        <div class="form-group mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input id="email" type="email" name="email" class="form-control form-control-lg"
-                                value="{{ old('email') }}" required autofocus placeholder="Enter your email">
-                            @error('email')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
+                            <h5 class="auth-title">Login</h5>
 
-                        <!-- Password -->
-                        <div class="form-group mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input id="password" type="password" name="password" class="form-control form-control-lg"
-                                required placeholder="Enter your password">
-                            @error('password')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
+                            <form action="{{ route('login') }}" method="POST">
+                                @csrf
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input id="email" type="email" name="email" class="form-control"
+                                        value="{{ old('email') }}" required autofocus placeholder="Enter your email">
+                                    @error('email')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
 
-                        <!-- Remember Me -->
-                        <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
-                            <label class="form-check-label" for="remember_me">Remember me</label>
-                        </div>
+                                <div class="form-group mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input id="password" type="password" name="password" class="form-control" required
+                                        placeholder="Enter your password">
+                                    @error('password')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
 
-                        <!-- Login Button -->
-                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-4 btn-hover">
-                            Log in
-                        </button>
-                    </form>
+                                <div class="form-group mb-3">
+                                    <div class="custom-control custom-checkbox checkbox-info">
+                                        <input type="checkbox" class="custom-control-input" id="checkbox-signin">
+                                        <label class="custom-control-label" for="checkbox-signin">Remember me</label>
+                                    </div>
+                                </div>
 
-                    {{-- <!-- Forgot Password & Sign Up -->
-                    <div class="text-center mt-3">
-                        @if (Route::has('password.request'))
-                            <a href="{{ route('password.request') }}" class="text-decoration-none text-primary">
-                                Forgot your password?
-                            </a>
-                        @endif
+                                <div class="form-group mb-0 text-center">
+                                    <button class="btn btn-danger btn-block" type="submit"> Log In </button>
+                                </div>
+
+                            </form>
+
+
+
+                        </div> <!-- end card-body -->
                     </div>
+                    <!-- end card -->
 
-                    <div class="text-center mt-4">
-                        <p class="text-muted">Don't have an account? <a href="{{ route('register') }}"
-                                class="text-primary text-decoration-none">Sign up</a></p>
-                    </div> --}}
-                </div>
+
+                    <!-- end row -->
+
+                </div> <!-- end col -->
             </div>
+            <!-- end row -->
         </div>
+        <!-- end container -->
     </div>
-
-    <style>
-        .btn-hover:hover {
-            background-color: #007bff;
-            color: #fff;
-            transform: scale(1.02);
-            transition: transform 0.2s ease-in-out;
-        }
-    </style>
 @endsection
