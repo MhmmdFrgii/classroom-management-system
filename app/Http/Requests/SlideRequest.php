@@ -21,10 +21,18 @@ class SlideRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'title' => 'nullable',
-            'image' => 'required|mimes:png,jpg,jpeg|'
+
+        $rules = [
+            'title' => 'nullable|max:250'
         ];
+
+        if ($this->isMethod('post')) {
+            $rules['image'] = 'required|mimes:png,jpg,jpeg|max:2048';
+        } elseif ($this->isMethod('put') || $this->isMethod('patch')) {
+            $rules['image'] = 'nullable|mimes:png,jpg,jpeg|max:2048';
+        }
+
+        return $rules;
     }
 
     public function messages(): array

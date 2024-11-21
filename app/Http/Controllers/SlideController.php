@@ -69,8 +69,6 @@ class SlideController extends Controller
     {
         $this->slideService->updateSlide($id, $request->validated());
 
-        $slide = $this->slideService->getAllSlide();
-
         return redirect()->route('slides.index')->with('success', 'Data berhasil di edit');
     }
 
