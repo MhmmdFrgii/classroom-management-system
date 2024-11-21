@@ -1,17 +1,40 @@
-{{-- Header Section --}}
-<header
-    class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-500/50 backdrop-blur-md w-[400px] items-center z-20 rounded-2xl">
-    <div class="container flex justify-center text-center items-center px-4 py-1">
-        <nav class="flex space-x-8">
-            <a href="{{ route('home') }}" id="home-link" class="nav-link text-sm font-semibold text-white py-2">Beranda</a>
-            <a href="{{ route('home') }}#memory" id="home-link"
-                class="nav-link text-sm font-semibold text-white py-2">Memory</a>
-            <a href="{{ route('home') }}#ss" id="home-link"
-                class="nav-link text-sm font-semibold text-white py-2">Struktur &
-                Jadwal</a>
-        </nav>
+<header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <div class="container">
+        <div class="flex items-ceneter justify-between relative">
+            <div class="px-4 xl:hidden">
+                <a href="{{ route('home') }}" class="font-bold text-xl text-primary block py-6">XIIRPL</a>
+            </div>
+            <div class="flex items-center px-4">
+                <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 xl:hidden z-[9999]">
+                    <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                    <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+                </button>
+
+                <nav id="nav-menu"
+                    class="hidden absolute xl:py-1.5 py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-2 top-full xl:mt-5 xl:translate-x-[300px] xl:block xl:static xl:bg-zinc-800/70 xl:backdrop-blur-md xl:max-w-full xl:shadow-none xl:rounded-3xl">
+                    <ul class="block xl:flex">
+                        <li class="group">
+                            <a href="{{ route('home') }}" id="home-link"
+                                class="text-base text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Beranda</a>
+                        </li>
+                        <li class="group">
+                            <a href="{{ route('home') }}#memory" id="home-link"
+                                class="text-base text-dark xl:text-white py-1 mx-8 xl:mx-2 flex group-hover:text-primary transition duration-300">Memory
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="{{ route('home') }}#ss" id="home-link"
+                                class="text-base text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Structure
+                                & Sechedule</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 </header>
+<!-- Header section end -->
 
 <style>
     /* Styling dasar untuk link */
@@ -60,6 +83,41 @@
     }
 </style>
 
+<script>
+    // Ambil elemen hamburger, garisnya, dan elemen header
+    const hamburger = document.querySelector("#hamburger");
+    const navMenu = document.querySelector("#nav-menu");
+    const hamburgerLines = document.querySelectorAll(".hamburger-line");
+    const header = document.querySelector("header");
+
+    // Toggle menu saat hamburger di klik
+    hamburger.addEventListener("click", function() {
+        hamburger.classList.toggle("hamburger-active"); // Animasi transform
+        navMenu.classList.toggle("hidden");
+    });
+
+    // Logika untuk mengubah warna header dan hamburger saat scroll
+    window.onscroll = function() {
+        const fixedNav = header.offsetTop;
+
+        // Tetap fixed untuk semua layar
+        if (window.pageYOffset > fixedNav) {
+            header.classList.add("navbar-fixed");
+
+            // Jika di mobile, ubah warna hamburger saat scroll
+            if (window.innerWidth <= 768) {
+                hamburgerLines.forEach(line => line.classList.add("hamburger-line-dark")); // Warna dark mode
+            }
+        } else {
+            header.classList.remove("navbar-fixed");
+
+            // Kembalikan warna default hamburger di mobile
+            if (window.innerWidth <= 768) {
+                hamburgerLines.forEach(line => line.classList.remove("hamburger-line-dark"));
+            }
+        }
+    };
+</script>
 <script>
     function setActiveLink() {
         // Dapatkan path dan hash dari URL
