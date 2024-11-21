@@ -392,7 +392,7 @@
             // Refresh AOS animations to reinitialize visible elements
             setTimeout(() => {
                 if (window.AOS) {
-                    AOS.refresh();
+                    AOS.refreshHard();
                 }
             }, 100); // Delay to ensure visibility changes are applied
         }
