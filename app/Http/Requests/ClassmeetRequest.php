@@ -21,11 +21,18 @@ class ClassmeetRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'title' => 'required',
-            'description' => 'nullable',
-            'image' => 'required|mimes:png,jpg,jpeg'
+            'description' => 'nullable'
         ];
+
+        if ($this->isMethod('post')) {
+            $rules['image'] = 'required|mimes:png,jpg,jpeg';
+        } elseif ($this->isMethod('put') || $this->isMethod('patch')) {
+            $rules['image'] = 'nullable|mimes:png,jpg,jpeg';
+        }
+
+        return $rules;
     }
 
     public function messages(): array
