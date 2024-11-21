@@ -8,6 +8,7 @@
     background-position: center;
 }
 
+/* Gaya utama */
 .swiper-slide img {
     width: 450px;
     height: 350px;
@@ -32,6 +33,40 @@
 .swiper-pagination-bullet-active {
     background-color: #ffffff;
     opacity: 1;
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 768px (tablet dan ponsel) */
+@media screen and (max-width: 768px) {
+    .swiper-slide img {
+        width: 350px; /* Kurangi lebar gambar */
+        height: 250px; /* Kurangi tinggi gambar */
+    }
+
+    .swiper-pagination {
+        gap: 15px; /* Kurangi jarak antar bullet */
+    }
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 480px (ponsel kecil) */
+@media screen and (max-width: 480px) {
+    .swiper-slide img {
+        width: 400px; /* Lebar lebih kecil untuk layar kecil */
+        height: 200px; /* Tinggi lebih kecil untuk layar kecil */
+    }
+
+    .swiper-pagination {
+        gap: 10px; /* Jarak antar bullet lebih kecil */
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px; /* Kurangi ukuran bullet */
+        height: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 12px; /* Bullet aktif sedikit lebih besar */
+        height: 12px;
+    }
 }
 
 /* .swiper-button-next,
@@ -94,4 +129,48 @@
     background-size: cover; /* Sesuaikan agar gambar memenuhi area */
     background-repeat: no-repeat; /* Menghindari pengulangan */
     background-position: center; /* Menempatkan gambar di tengah */
+}
+
+.navbar-fixed {
+    @apply fixed z-[9999];
+}
+
+@media (max-width: 768px) {
+    .navbar-fixed {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Default Hamburger Line (Light Mode) */
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-white transition-all duration-300 ease-in-out;
+}
+
+/* Dark Mode Styling */
+.hamburger-line-dark {
+    background-color: #1a202c; /* Dark mode color (example: Tailwind 'gray-800') */
+}
+
+/* Animasi transform saat aktif (toggle menu) */
+.hamburger-active .origin-top-left {
+    transform: rotate(45deg) translateY(8px); /* Garis atas menjadi diagonal */
+}
+.hamburger-active .origin-bottom-left {
+    transform: -rotate(45deg) translateY(-8px); /* Garis bawah menjadi diagonal */
+}
+.hamburger-active
+    .hamburger-line:not(.origin-top-left):not(.origin-bottom-left) {
+    opacity: 0; /* Garis tengah menghilang */
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
 }
