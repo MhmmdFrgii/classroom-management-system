@@ -3,7 +3,7 @@
     <section class="hero-section">
         {{-- Hero Section with Slideshow --}}
         <section id="home"
-            class="w-full mx-auto h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-[#1e1e1e] from-10% via-[#1e1e1e]/90 via-40%  to-lime-700/90">
+            class="w-full mx-auto h-96 xl:h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-[#1e1e1e] from-10% via-[#1e1e1e]/90 via-40%  to-lime-700/90">
             <div>
                 <h5 class="text-xl xl:text-2xl font-anton mb-1 xl:mb-2  tracking-wide">Hi, Bro IS!</h5>
                 <h1 class="text-6xl xl:text-7xl font-anton mb-1 xl:mb-2 glow-text tracking-normal uppercase">WELLCOME
@@ -14,20 +14,22 @@
     </section>
 
     {{-- Section Memory --}}
-    <section id="memory" class="pt-36 w-full min-h-screen shadow-md "
+    <section id="memory" class="xl:pt-36 w-full h-1/2 xl:min-h-screen shadow-md "
         style="background-image: url('/lines/mesh3..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <div class="container">
             <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-5">
+                <div class="hidden xl:block max-w-xl mx-auto text-center mb-5">
                     <h2 class="inter-bold text-white text-2xl mb-4 sm:text-4xl lg:text-5xl">Memory
                     </h2>
                 </div>
             </div>
             <!-- Memory cards (example) -->
-            <div class="w-full px-4 flex flex-wrap mx-auto">
-                <a href="{{ route('memorypagelaran') }}" class="mb-12 p-3 w-full xl:w-1/3 group">
-                    <div class="w-full p-3 bg-white rounded-xl shadow-md xl:hover:scale-105 transition duration-300">
-                        <div class="rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
+            <div class="w-full px-4 grid grid-cols-2 gap-4 xl:gap-0 xl:flex xl:flex-wrap mx-auto">
+                <a href="{{ route('memorypagelaran') }}" class="row-span-2 gap-2 xl:p-3 w-full xl:w-1/3 group">
+                    <div
+                        class="w-full h-full p-6 flex flex-col justify-between xl:block bg-gray-500/40 backdrop-blur-sm xl:p-3 xl:bg-white rounded-3xl xl:rounded-xl shadow-md xl:hover:scale-105 transition duration-300">
+                        <div
+                            class="hidden xl:block rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
                             <!-- Gambar untuk memory card -->
                             @if ($pagelaransImage)
                                 <img src="{{ asset('storage/' . $pagelaransImage->image) }}" alt="Image"
@@ -37,14 +39,21 @@
                                     class="w-full h-[200px]" />
                             @endif
                         </div>
+                        <div class="flex justify-between items-center">
+                            <i class="fab fa-instagram text-white text-4xl xl:hidden"></i>
+                            <i class="fas fa-chevron-right text-white text-xl xl:hidden"></i>
+                        </div>
                         <h3
-                            class="text-sm font-semibold uppercase text-dark pt-10 mb-3 text-center transition duration-300">
+                            class="text-sm font-semibold xl:uppercase text-white xl:text-dark bottom-0 xl:pt-10 mb-3 xl:text-center transition duration-300">
                             Pagelaran Picture</h3>
                     </div>
                 </a>
-                <a href="{{ route('memoryclassmeet') }}" class="mb-12 p-3 w-full xl:w-1/3 group">
-                    <div class="w-full p-3 bg-white rounded-xl shadow-md xl:hover:scale-105 transition duration-500">
-                        <div class="rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
+                <a href="{{ route('memoryclassmeet') }}"
+                    class="col-span-1 row-span-1 gap-2 xl:p-3 w-full xl:w-1/3 group">
+                    <div
+                        class="w-full h-[100px] xl:h-full p-6 flex flex-col justify-between xl:block bg-gray-500/40 backdrop-blur-sm xl:p-3 xl:bg-white rounded-3xl xl:rounded-xl shadow-md xl:hover:scale-105 transition duration-500">
+                        <div
+                            class="hidden xl:block rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
                             @if ($classmeetImage)
                                 <img src="{{ asset('storage/' . $classmeetImage->image) }}" alt="Image"
                                     class="w-full h-[200px]" />
@@ -53,15 +62,21 @@
                                     class="w-full h-[200px]" />
                             @endif
                         </div>
+                        <div class="flex justify-between items-center pt-0 xl:hidden">
+                            <i class="fas fa-link text-white text-2xl xl:hidden"></i>
+                            <i class="fas fa-chevron-right text-white text-xl xl:hidden"></i>
+                        </div>
                         <h3
-                            class="text-sm font-semibold uppercase text-dark pt-10 mb-3 text-center transition duration-300">
+                            class="text-sm font-semibold pt-2 xl:uppercase text-white xl:text-dark xl:pt-10 mb-3 xl:text-center transition duration-300">
                             Classmeet Picture
                         </h3>
                     </div>
                 </a>
-                <a href="{{ route('memoryp5') }}" class="mb-12 p-3 w-full xl:w-1/3 group">
-                    <div class="w-full p-3 bg-white rounded-xl shadow-md xl:hover:scale-105 transition duration-500">
-                        <div class="rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
+                <a href="{{ route('memoryp5') }}" class="col-span-1 row-span-1 gap-2 xl:p-3 w-full xl:w-1/3 group">
+                    <div
+                        class="w-full h-[100px] xl:h-full p-6 flex flex-col justify-between bg-gray-500/40 backdrop-blur-sm xl:p-3 xl:bg-white rounded-3xl xl:rounded-xl shadow-md xl:hover:scale-105 transition duration-500">
+                        <div
+                            class="hidden xl:block rounded-lg overflow-hidden group-hover:opacity-95 transition duration-300">
                             @if ($p5Image)
                                 <img src="{{ asset('storage/' . $p5Image->image) }}" alt="Image"
                                     class="w-full h-[200px]" />
@@ -70,8 +85,12 @@
                                     class="w-full h-[200px]" />
                             @endif
                         </div>
+                        <div class="flex justify-between items-center pt-0 xl:hidden">
+                            <i class="fas fa-link text-white text-2xl xl:hidden"></i>
+                            <i class="fas fa-chevron-right text-white text-xl xl:hidden"></i>
+                        </div>
                         <h3
-                            class="text-sm font-semibold uppercase text-dark pt-10 mb-3 text-center transition duration-300">
+                            class="text-sm font-semibold pt-2 xl:uppercase text-white xl:text-dark xl:pt-10 mb-3 text-center transition duration-300">
                             P5 Picture</h3>
                     </div>
                 </a>
