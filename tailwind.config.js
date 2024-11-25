@@ -14,6 +14,9 @@ export default {
             center: true,
             padding: "12px",
         },
+        safelist: [
+            "navbar-fixed", // Tambahkan ini agar kelas tidak dihapus
+        ],
         extend: {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
