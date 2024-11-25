@@ -12,7 +12,7 @@
                 </button>
 
                 <nav id="nav-menu"
-                    class="hidden absolute xl:py-1.5 py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-2 top-full xl:mt-5 xl:translate-x-[300px] xl:block xl:static xl:bg-zinc-800/70 xl:backdrop-blur-md xl:max-w-full xl:shadow-none xl:rounded-3xl">
+                    class="hidden absolute xl:py-1.5 py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-2 top-full xl:mt-5 xl:right-1/2 xl:translate-x-[400px] xl:block xl:static xl:bg-zinc-800/70 xl:backdrop-blur-md xl:max-w-full xl:shadow-none xl:rounded-3xl">
                     <ul class="block xl:flex">
                         <li class="group">
                             <a href="{{ route('home') }}" id="home-link"
