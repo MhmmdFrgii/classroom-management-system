@@ -1,4 +1,4 @@
-<header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+<header class="fixed top-0 left-0 w-full flex items-center z-10">
     <div class="container">
         <div class="flex items-ceneter justify-between relative">
             <div class="px-4 xl:hidden">
@@ -16,16 +16,21 @@
                     <ul class="block xl:flex">
                         <li class="group">
                             <a href="{{ route('home') }}" id="home-link"
-                                class="text-base text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Beranda</a>
+                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Beranda</a>
                         </li>
-                        <li class="group">
+                        <li class="group hidden xl:block">
                             <a href="{{ route('home') }}#memory" id="home-link"
-                                class="text-base text-dark xl:text-white py-1 mx-8 xl:mx-2 flex group-hover:text-primary transition duration-300">Memory
+                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 xl:mx-2 flex group-hover:text-primary transition duration-300">Memory
+                            </a>
+                        </li>
+                        <li class="group xl:hidden">
+                            <a href="{{ route('home') }}#home" id="home-link"
+                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 xl:mx-2 flex group-hover:text-primary transition duration-300">Memory
                             </a>
                         </li>
                         <li class="group">
                             <a href="{{ route('home') }}#ss" id="home-link"
-                                class="text-base text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Structure
+                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Structure
                                 & Sechedule</a>
                         </li>
                     </ul>
