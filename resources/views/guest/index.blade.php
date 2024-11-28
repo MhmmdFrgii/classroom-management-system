@@ -23,6 +23,7 @@
                     </h2>
                 </div>
             </div>
+
             <!-- Memory cards (example) -->
             <div class="w-full px-4 grid grid-cols-2 gap-4 xl:gap-0 xl:flex xl:flex-wrap mx-auto">
                 <a href="{{ route('memorypagelaran') }}" class="row-span-2 gap-2 xl:p-3 w-full xl:w-1/3 group">
@@ -125,9 +126,9 @@
         </div>
     </section>
 
-    <section id="ss" class="pt-24 pb-0 xl:pb-28 h-1/2 xl:min-h-screen"
+    <section id="ss" class="pt-24 w-full pb-0 xl:pb-28 h-1/2 xl:min-h-screen"
         style="background-image: url('/lines/mesh..svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center w-full p-0">
             {{-- <h1 class="text-3xl text-white font-bold mb-6">Structure & Schedule</h1> --}}
 
             <!-- Toggle Buttons -->
@@ -145,7 +146,7 @@
 
             <!-- Sections -->
             <div id="structure"
-                class="section w-full xl:max-w-3xl mx-auto p-8 bg-transparent rounded-lg h-[550px] xl:min-h-screen">
+                class="section z-1 relative w-full xl:max-w-3xl mx-auto p-0 overflow-auto bg-transparent rounded-lg h-[550px] xl:min-h-screen">
                 {{-- <h2 class="text-2xl font-semibold text-center mb-4 text-white">Structure</h2> --}}
 
                 <!-- Wali Kelas -->
@@ -155,8 +156,8 @@
                         S.Pd.I</div>
 
                     <!-- Garis Vertikal -->
-                    <div class="flex flex-col items-center w-full pt-4 absolute" data-aos="fade-up"
-                        data-aos-delay="400">
+                    <div class="flex flex-col justify-center items-center max-w-sm xl:w-full pt-4 absolute"
+                        data-aos="fade-up" data-aos-delay="400">
                         <svg width="30" height="50">
                             <line x1="15" y1="0" x2="15" y2="50" stroke="white"
                                 stroke-width="1" />
@@ -164,7 +165,7 @@
 
                         <!-- Garis Horizontal -->
                         <div class="flex items-start">
-                            <svg class="w-[230px] xl:w-[566px] h-30">
+                            <svg class="w-[250px] xl:w-[400px] h-30">
                                 <line x1="0" y1="0" x2="700" y2="0" stroke="white"
                                     stroke-width="2" />
                             </svg>
@@ -172,60 +173,66 @@
                     </div>
 
                     <!-- Garis Kiri dan Kanan dengan Bulatan -->
-                    <div class="flex justify-between w-full -bottom-[75px] absolute" data-aos="fade-up"
+                    <div class="flex justify-between max-w-sm xl:w-full -bottom-[75px] absolute" data-aos="fade-up"
                         data-aos-delay="500">
-                        <svg width="30" height="25" class="translate-x-[55px] xl:translate-x-[68px]">
+                        <svg width="30" height="25" class="translate-x-[155px] xl:translate-x-[392px]">
                             <line x1="0" y1="0" x2="0" y2="25" stroke="white"
                                 stroke-width="2" />
                         </svg>
-                        <svg width="30" height="25" class="-translate-x-[55px] xl:-translate-x-[68px]">
+                        <svg width="30" height="25" class="-translate-x-[155px] xl:-translate-x-[392px]">
                             <line x1="30" y1="0" x2="30" y2="25" stroke="white"
                                 stroke-width="2" />
                         </svg>
                     </div>
 
                     {{-- circle --}}
-                    <div class="flex justify-between w-full -bottom-[90px] absolute" data-aos="fade-up"
+                    <div class="flex justify-between max-w-sm xl:w-full -bottom-[90px] absolute" data-aos="fade-up"
                         data-aos-delay="600">
-                        <svg width="20" height="30" class="translate-x-[41px] xl:translate-x-[54px]">
+                        <svg width="20" height="30" class="translate-x-[130px] xl:translate-x-[377px]">
                             <circle cx="15" cy="15" r="4" fill="white" />
                         </svg>
-                        <svg width="20" height="30" class="-translate-x-[51px] xl:-translate-x-[64px]">
+                        <svg width="20" height="30" class="-translate-x-[140px] xl:-translate-x-[387px]">
                             <circle cx="15" cy="15" r="4" fill="white" />
                         </svg>
                     </div>
 
                     <!-- Ketua dan Wakil Ketua -->
-                    <div class="flex justify-between items-center w-full -bottom-[150px] absolute" data-aos="fade-up"
-                        data-aos-delay="700">
+                    <div class="flex justify-between items-center max-w-sm xl:items-center xl:justify-center xl:w-full -bottom-[150px] absolute"
+                        data-aos="fade-up" data-aos-delay="700">
                         <div class="text-center">
-                            <p class="text-gray-300">Ketua Kelas</p>
-                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Azka</div>
+                            <p class="text-gray-300 text-sm xl:text-base">Ketua Kelas</p>
+                            <div
+                                class="bg-white text-sm xl:text-base text-black px-2 py-[0.30rem] w-[120px] xl:w-32 rounded-full">
+                                Azka
+                            </div>
                         </div>
                         <!-- Garis Horizontal -->
                         <div class="flex items-center translate-y-7">
-                            <svg class="w-[100px] xl:w-[450px] h-30" width="450" height="30">
+                            <svg class="w-[130px] xl:w-[270px] h-30" width="450" height="30">
                                 <line x1="0" y1="0" x2="700" y2="0" stroke="white"
                                     stroke-width="2" />
                             </svg>
                         </div>
                         <div class="text-center">
-                            <p class="text-gray-300">Wakil Ketua</p>
-                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Alfan</div>
+                            <p class="text-gray-300 text-sm xl:text-base">Wakil Ketua</p>
+                            <div
+                                class="bg-white text-sm xl:text-base text-black px-2 py-[0.30rem] w-[120px] xl:w-32 rounded-full">
+                                Alfan
+                            </div>
                         </div>
                     </div>
 
                     <!-- Garis Vertikal -->
-                    <div class="flex flex-col items-center w-full pt-4 -bottom-[245px] absolute" data-aos="fade-up"
-                        data-aos-delay="800">
-                        <svg width="30" height="80">
+                    <div class="flex flex-col items-center max-w-sm xl:w-full pt-4 -bottom-[245px] absolute"
+                        data-aos="fade-up" data-aos-delay="800">
+                        <svg width="30" height="76">
                             <line x1="15" y1="80" x2="15" y2="0" stroke="white"
                                 stroke-width="1" />
                         </svg>
 
                         <!-- Garis Horizontal -->
                         <div class="flex items-start">
-                            <svg class="w-[180px] xl:w-[300px]" height="30">
+                            <svg class="w-[200px] xl:w-[300px]" height="30">
                                 <line x1="0" y1="0" x2="700" y2="0" stroke="white"
                                     stroke-width="2" />
                             </svg>
@@ -233,25 +240,25 @@
                     </div>
 
                     <!-- Garis Kiri dan Kanan dengan Bulatan -->
-                    <div class="flex justify-between w-full -bottom-[240px] absolute" data-aos="fade-up"
+                    <div class="flex justify-between max-w-sm xl:w-full -bottom-[240px] absolute" data-aos="fade-up"
                         data-aos-delay="900">
-                        <svg width="30" height="25" class="translate-x-[80px] xl:translate-x-[202px]">
+                        <svg width="30" height="25" class="translate-x-[130px] xl:translate-x-[42px]">
                             <line x1="0" y1="0" x2="0" y2="25" stroke="white"
                                 stroke-width="2" />
                         </svg>
-                        <svg width="30" height="25" class="-translate-x-[80px] xl:-translate-x-[202px]">
+                        <svg width="30" height="25" class="-translate-x-[130px] xl:-translate-x-[42px]">
                             <line x1="30" y1="0" x2="30" y2="25" stroke="white"
                                 stroke-width="2" />
                         </svg>
                     </div>
 
                     {{-- circle --}}
-                    <div class="flex justify-between w-full -bottom-[258px] absolute" data-aos="fade-up"
+                    <div class="flex justify-between max-w-sm xl:w-full -bottom-[258px] absolute" data-aos="fade-up"
                         data-aos-delay="1000">
-                        <svg width="20" height="30" class="translate-x-[66px] xl:translate-x-[188px]">
+                        <svg width="20" height="30" class="translate-x-[105px] xl:translate-x-[28px]">
                             <circle cx="15" cy="15" r="4" fill="white" />
                         </svg>
-                        <svg width="20" height="30" class="-translate-x-[76px] xl:-translate-x-[198px]">
+                        <svg width="20" height="30" class="-translate-x-[115px] xl:-translate-x-[38px]">
                             <circle cx="15" cy="15" r="4" fill="white" />
                         </svg>
                     </div>
@@ -259,17 +266,25 @@
 
 
                     <!-- Sekretaris dan Bendahara -->
-                    <div class="flex justify-between w-full -bottom-[360px] absolute" data-aos="fade-up"
+                    <div class="flex justify-between max-w-sm xl:w-full -bottom-[360px] absolute" data-aos="fade-up"
                         data-aos-delay="1100">
-                        <div class="text-center translate-x-[18px] xl:translate-x-[140px]">
+                        <div class="text-center translate-x-[160px] xl:translate-x-[280px]">
                             <p class="text-gray-300">Sekretaris</p>
-                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Fabian</div>
-                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full mt-2">Widi</div>
+                            <div
+                                class="bg-white text-sm xl:text-base text-black px-2 py-[0.30rem] w-[120px] xl:w-32 rounded-full">
+                                Fabian</div>
+                            <div
+                                class="bg-white text-sm xl:text-base text-black px-2 py-[0.30rem] w-[120px] xl:w-32 rounded-full mt-2">
+                                Widi</div>
                         </div>
-                        <div class="text-center -translate-x-[18px] xl:-translate-x-[140px]">
+                        <div class="text-center -translate-x-[160px] xl:-translate-x-[280px]">
                             <p class="text-gray-300">Bendahara</p>
-                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full">Rama</div>
-                            <div class="bg-white text-black px-4 py-1 w-32 rounded-full mt-2">Indra crypto</div>
+                            <div
+                                class="bg-white text-sm xl:text-base text-black px-2 py-[0.30rem] w-[120px] xl:w-32 rounded-full">
+                                Rama</div>
+                            <div
+                                class="bg-white text-sm xl:text-base text-black px-2 py-[0.30rem] w-[120px] xl:w-32 rounded-full mt-2">
+                                Indra crypto</div>
                         </div>
                     </div>
                 </div>
@@ -430,4 +445,30 @@
         }
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".tab-link");
+            const contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    // Reset active state for tabs and content
+                    tabs.forEach((t) => t.classList.remove("bg-slate-300", "font-bold"));
+                    contents.forEach((content) => {
+                        content.classList.add("hidden", "opacity-0");
+                        content.classList.remove("block", "opacity-100");
+                    });
+
+                    // Activate clicked tab and related content
+                    const target = tab.getAttribute("data-tab-target");
+                    tab.classList.add("bg-slate-300", "font-bold");
+                    const activeContent = document.getElementById(target);
+                    activeContent.classList.remove("hidden", "opacity-0");
+                    activeContent.classList.add("block", "opacity-100");
+                });
+            });
+        });
+    </script>
 </x-guest>
