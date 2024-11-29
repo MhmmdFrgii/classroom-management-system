@@ -6,9 +6,9 @@
             class="w-full mx-auto h-96 xl:h-screen flex items-center justify-center text-center text-white relative bg-gradient-to-t from-[#1e1e1e] from-10% via-[#1e1e1e]/90 via-40%  to-lime-700/90">
             <div>
                 <h5 class="text-xl xl:text-3xl font-anton mb-1 xl:mb-2  tracking-wide">Hi, Bro IS!</h5>
-                <h1 class="text-6xl xl:text-7xl font-anton mb-1 xl:mb-2 glow-text tracking-normal uppercase">WELLCOME
+                <h1 class="text-6xl xl:text-7xl font-anton mb-1 xl:mb-1 glow-text tracking-normal uppercase">WELLCOME
                 </h1>
-                <h6 class="text-sm xl:text-md inter-sans mb-1 xl:mb-4 tracking-wider">TO XII RPL</h6>
+                <h6 class="text-sm xl:text-lg inter-sans mb-1 xl:mb-4 tracking-wider">TO XII RPL</h6>
             </div>
         </section>
     </section>
@@ -25,20 +25,99 @@
             </div>
 
             <!-- Memory cards (example) -->
-            <div class="w-full px-4 grid grid-cols-2 gap-4 xl:gap-0 xl:flex xl:flex-wrap mx-auto">
-                <a href="{{ route('memorypagelaran') }}" class="row-span-2 gap-2 xl:p-3 w-full xl:w-1/3 group">
+            <div class="w-full px-4 grid grid-cols-2 gap-4 xl:gap-4 xl:flex xl:flex-wrap mx-auto">
+
+                <div
+                    class="hidden xl:block relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+                    <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+                        @if ($pagelaransImage)
+                            <img src="{{ asset('storage/' . $pagelaransImage->image) }}" alt="Image"
+                                class="w-full h-full object-cover" />
+                        @else
+                            <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
+                                class="w-full h-full" />
+                        @endif
+                    </div>
+                    <div class="p-4">
+                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+                            Pagelaran Picture
+                        </h6>
+                        <p class="text-slate-600 leading-normal font-light">
+                            Pagelaran SMKN 1 Lumajang, ajang &quot;kreatif&quot; seni & budaya siswa. Tampilkan bakat
+                            tari, musik,
+                            teater, & karya seni lokal dengan semangat kebersamaan.🎭🎶
+                        </p>
+                    </div>
+                    <div class="px-4 pb-4 pt-0 mt-2">
+                        <a href="{{ route('memorypagelaran') }}"
+                            class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            type="button">
+                            Read more
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="hidden xl:block relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+                    <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+                        @if ($classmeetImage)
+                            <img src="{{ asset('storage/' . $classmeetImage->image) }}" alt="Image"
+                                class="w-full h-full object-cover" />
+                        @else
+                            <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
+                                class="w-full h-full" />
+                        @endif
+                    </div>
+                    <div class="p-4">
+                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+                            Classmeet Picture
+                        </h6>
+                        <p class="text-slate-600 leading-normal font-light">
+                            Classmeeting SMKN 1 Lumajang, ajang seru lomba olahraga & kreativitas antar kelas.
+                            Tingkatkan sportivitas, kebersamaan, dan semangat kompetisi siswa! 🏀🎨🎉
+                        </p>
+                    </div>
+                    <div class="px-4 pb-4 pt-0 mt-2">
+                        <a href="{{ route('memoryclassmeet') }}"
+                            class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            type="button">
+                            Read more
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="hidden xl:block relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+                    <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+                        @if ($p5Image)
+                            <img src="{{ asset('storage/' . $p5Image->image) }}" alt="Image"
+                                class="w-full h-full object-cover" />
+                        @else
+                            <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
+                                class="w-full h-full" />
+                        @endif
+                    </div>
+                    <div class="p-4">
+                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+                            p5 Picture
+                        </h6>
+                        <p class="text-slate-600 leading-normal font-light">
+                            P5 SMKN 1 Lumajang, proyek penguatan profil pelajar pancasila. Kegiatan kolaboratif yang
+                            kembangkan karakter, kreativitas, dan nilai kebangsaan siswa! 🌟📚
+                        </p>
+                    </div>
+                    <div class="px-4 pb-4 pt-0 mt-2">
+                        <a href="{{ route('memoryp5') }}"
+                            class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            type="button">
+                            Read more
+                        </a>
+                    </div>
+                </div>
+
+                <a href="{{ route('memorypagelaran') }}" class="row-span-2 gap-2 xl:p-3 w-full xl:hidden group">
                     <div
                         class="w-full h-full p-6 flex flex-col justify-between xl:block bg-gray-500/40 backdrop-blur-sm xl:p-3 xl:bg-white rounded-3xl xl:rounded-xl shadow-md">
-                        <div class="hidden xl:block rounded-lg overflow-hidden">
-                            <!-- Gambar untuk memory card -->
-                            @if ($pagelaransImage)
-                                <img src="{{ asset('storage/' . $pagelaransImage->image) }}" alt="Image"
-                                    class="w-full h-[300px] object-cover" />
-                            @else
-                                <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
-                                    class="w-full h-[200px]" />
-                            @endif
-                        </div>
                         <div class="flex justify-between items-center">
                             <i class="fab fa-instagram text-white text-4xl xl:hidden"></i>
                             <i class="fas fa-chevron-right text-white text-xl xl:hidden"></i>
@@ -49,18 +128,9 @@
                     </div>
                 </a>
                 <a href="{{ route('memoryclassmeet') }}"
-                    class="col-span-1 row-span-1 gap-2 xl:p-3 w-full xl:w-1/3 group">
+                    class="col-span-1 row-span-1 gap-2 xl:p-3 w-full xl:hidden group">
                     <div
                         class="w-full h-[100px] xl:h-full p-6 flex flex-col justify-between xl:block bg-gray-500/40 backdrop-blur-sm xl:p-3 xl:bg-white rounded-3xl xl:rounded-xl shadow-md">
-                        <div class="hidden xl:block rounded-lg overflow-hidden">
-                            @if ($classmeetImage)
-                                <img src="{{ asset('storage/' . $classmeetImage->image) }}" alt="Image"
-                                    class="w-full h-[300px]" />
-                            @else
-                                <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
-                                    class="w-full h-[200px]" />
-                            @endif
-                        </div>
                         <div class="flex justify-between items-center pt-0 xl:hidden">
                             <i class="fas fa-link text-white text-2xl xl:hidden"></i>
                             <i class="fas fa-chevron-right text-white text-xl xl:hidden"></i>
@@ -71,18 +141,10 @@
                         </h3>
                     </div>
                 </a>
-                <a href="{{ route('memoryp5') }}" class="col-span-1 row-span-1 gap-2 xl:p-3 w-full xl:w-1/3 group">
+
+                <a href="{{ route('memoryp5') }}" class="col-span-1 row-span-1 gap-2 xl:p-3 w-full xl:hidden group">
                     <div
                         class="w-full h-[100px] xl:h-full p-6 flex flex-col justify-between bg-gray-500/40 backdrop-blur-sm xl:p-3 xl:bg-white rounded-3xl xl:rounded-xl shadow-md">
-                        <div class="hidden xl:block rounded-lg overflow-hidden">
-                            @if ($p5Image)
-                                <img src="{{ asset('storage/' . $p5Image->image) }}" alt="Image"
-                                    class="w-full h-[300px]" />
-                            @else
-                                <img src="{{ asset('storage/default_image.jpg') }}" alt="Default Image"
-                                    class="w-full h-[200px]" />
-                            @endif
-                        </div>
                         <div class="flex justify-between items-center pt-0 xl:hidden">
                             <i class="fas fa-link text-white text-2xl xl:hidden"></i>
                             <i class="fas fa-chevron-right text-white text-xl xl:hidden"></i>
@@ -132,7 +194,7 @@
             {{-- <h1 class="text-3xl text-white font-bold mb-6">Structure & Schedule</h1> --}}
 
             <!-- Toggle Buttons -->
-            <div class="flex justify-center space-x-1 mb-1">
+            <div class="flex justify-center space-x-1 mb-1" data-aos="fade-up">
                 <button onclick="showSection('structure')"
                     class="toggle-button py-1 w-32 text-white text-2xl xl:text-3xl font-semibold rounded">
                     Structure
@@ -150,7 +212,7 @@
                 {{-- <h2 class="text-2xl font-semibold text-center mb-4 text-white">Structure</h2> --}}
 
                 <!-- Wali Kelas -->
-                <p class="text-gray-300 text-center mb-1">Wali Kelas</p>
+                <p class="text-gray-300 text-center mb-1" data-aos="fade-up">Wali Kelas</p>
                 <div class="flex flex-col items-center space-y-4 relative">
                     <div class="bg-gray-300 text-black px-4 py-1 w-56 rounded-full" data-aos="fade-up">Siti Shofiyah
                         S.Pd.I</div>

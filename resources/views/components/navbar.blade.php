@@ -12,25 +12,25 @@
                 </button>
 
                 <nav id="nav-menu"
-                    class="hidden absolute xl:py-1.5 py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-2 top-full xl:mt-5 xl:right-1/2 xl:translate-x-[400px] xl:block xl:static xl:bg-zinc-800/70 xl:backdrop-blur-md xl:max-w-full xl:shadow-none xl:rounded-3xl">
+                    class="hidden absolute xl:py-1.5 py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-2 top-full xl:mt-4 xl:right-1/2 xl:translate-x-[400px] xl:block xl:static xl:bg-stone-800/80 xl:backdrop-blur-sm xl:max-w-full xl:shadow-none xl:rounded-xl">
                     <ul class="block xl:flex">
                         <li class="group">
                             <a href="{{ route('home') }}" id="home-link"
-                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Beranda</a>
+                                class="text-sm font-medium text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Beranda</a>
                         </li>
                         <li class="group hidden xl:block">
                             <a href="{{ route('home') }}#memory" id="home-link"
-                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 xl:mx-2 flex group-hover:text-primary transition duration-300">Memory
+                                class="text-sm font-medium text-dark xl:text-white py-1 mx-8 xl:mx-1 flex group-hover:text-primary transition duration-300">Memory
                             </a>
                         </li>
                         <li class="group xl:hidden">
                             <a href="{{ route('home') }}#home" id="home-link"
-                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 xl:mx-2 flex group-hover:text-primary transition duration-300">Memory
+                                class="text-sm font-medium text-dark xl:text-white py-1 mx-8 xl:mx-2 flex group-hover:text-primary transition duration-300">Memory
                             </a>
                         </li>
                         <li class="group">
                             <a href="{{ route('home') }}#ss" id="home-link"
-                                class="text-base font-inter text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Structure
+                                class="text-sm font-medium text-dark xl:text-white py-1 mx-8 flex group-hover:text-primary transition duration-300">Structure
                                 & Sechedule</a>
                         </li>
                     </ul>
